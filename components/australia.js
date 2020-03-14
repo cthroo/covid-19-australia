@@ -8,13 +8,7 @@ if (typeof fetch !== 'function') {
 
 export default function Australia() {
   const visEl = useRef(null);
-
-  const svgContainer = d3.select(visEl.current);
-
-  const svg = svgContainer
-    .selectAll('g')
-    .enter()
-    .append('g');
+  const svg = d3.select(visEl.current);
 
   //Width and height
   const w = 750;
@@ -197,7 +191,7 @@ export default function Australia() {
   });
 
   return (
-    <svg height={500}>
+    <svg height={h} width={w}>
       <g ref={visEl} />
     </svg>
   );
