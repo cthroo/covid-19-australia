@@ -8,11 +8,14 @@ const useStyles = makeStyles(theme => ({
   container: {
     flexGrow: 1,
   },
+  title: {
+    fontSize: '20px',
+  },
   mainContent: {
-    display: 'flex'
+    display: 'flex',
   },
   footer: {
-    textAlign: 'right',
+    textAlign: 'center',
   },
 }));
 

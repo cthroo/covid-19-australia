@@ -3,6 +3,12 @@ import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
+  mapSection: {},
+  title: {
+    fontSize: '20px',
+    textAlign: 'center',
+    marginTop: '20px',
+  },
   container: {
     height: '90vh',
   },
@@ -197,12 +203,15 @@ export default function Australia() {
   }, []);
 
   return (
-    <>
+    <div className={classes.mapSection}>
+      <div className={classes.title}>
+        Australia COVID-19 Coronavirus Tracker
+      </div>
       <div className={classes.container}>
         <svg height={600} width={750}>
           <g ref={visEl} />
         </svg>
       </div>
-    </>
+    </div>
   );
 }
