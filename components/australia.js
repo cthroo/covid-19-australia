@@ -3,7 +3,9 @@ import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
-  container: {},
+  container: {
+    height: '90vh',
+  },
 }));
 
 export default function Australia() {

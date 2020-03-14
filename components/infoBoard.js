@@ -34,39 +34,51 @@ export default function InfoBoard() {
   return (
     <div className={classes.root}>
       <Container className={classes.container} maxWidth="sm">
-        <Grid container item xs={12} spacing={3}>
-          <div className={classes.staActive}>
-            <div class="diff">( +62 )</div>
-            <div class="value">644</div>
-            <div class="label">Active</div>
-          </div>
-          <div className={classes.staAritic}>
-            <div class="diff">( +3 )</div>
-            <div class="value">35</div>
-            <div class="label">Critical</div>
-          </div>
-          <div className={classes.staDeceased}>
-            <div class="diff">( +3 )</div>
-            <div class="value">22</div>
-            <div class="label">Deaths</div>
-          </div>
+        <Grid container item xs={12} spacing={4}>
+          <Grid item xs={4}>
+            <div className={classes.staActive}>
+              <div class="diff">( +62 )</div>
+              <div class="value">644</div>
+              <div class="label">Active</div>
+            </div>
+          </Grid>
+          <Grid item xs={4}>
+            <div className={classes.staAritic}>
+              <div class="diff">( +3 )</div>
+              <div class="value">35</div>
+              <div class="label">Critical</div>
+            </div>
+          </Grid>
+          <Grid item xs={4}>
+            <div className={classes.staDeceased}>
+              <div class="diff">( +3 )</div>
+              <div class="value">22</div>
+              <div class="label">Deaths</div>
+            </div>
+          </Grid>
         </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <div className={classes.staTested}>
-            <div class="diff">( +829 )</div>
-            <div class="value">12060</div>
-            <div class="label">Tested</div>
-          </div>
-          <div className={classes.staConfirmed}>
-            <div class="diff">( +69 )</div>
-            <div class="value">788</div>
-            <div class="label">Confirmed</div>
-          </div>
-          <div className={classes.staRecovered}>
-            <div class="diff">( +4 )</div>
-            <div class="value">122</div>
-            <div class="label">Recovered</div>
-          </div>
+        <Grid container item xs={12} spacing={4}>
+          <Grid item xs={4}>
+            <div className={classes.staTested}>
+              <div class="diff">( +829 )</div>
+              <div class="value">12060</div>
+              <div class="label">Tested</div>
+            </div>
+          </Grid>
+          <Grid item xs={4}>
+            <div className={classes.staConfirmed}>
+              <div class="diff">( +69 )</div>
+              <div class="value">788</div>
+              <div class="label">Confirmed</div>
+            </div>
+          </Grid>
+          <Grid item xs={4}>
+            <div className={classes.staRecovered}>
+              <div class="diff">( +4 )</div>
+              <div class="value">122</div>
+              <div class="label">Recovered</div>
+            </div>
+          </Grid>
         </Grid>
       </Container>
     </div>
