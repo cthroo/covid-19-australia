@@ -1,6 +1,17 @@
+import React, {useRef} from 'react';
 import * as d3 from 'd3';
+import aus from '../data/aus.json';
 
 export default function Australia() {
+  const visEl = useRef(null);
+
+  const svgContainer = d3.select(visEl.current);
+
+  const svg = svgContainer
+    .selectAll('g')
+    .enter()
+    .append('g');
+
   //Width and height
   var w = 750;
   var h = 600;
@@ -28,13 +39,6 @@ export default function Australia() {
       '#fccde5',
       '#d9d9d9',
     ]);
-
-  //Create SVG
-  var svg = d3
-    .select('#svganchor')
-    .append('svg')
-    .attr('width', w)
-    .attr('height', h);
 
   //Load in GeoJSON data
   d3.json(aus, function(json) {
@@ -188,5 +192,9 @@ export default function Australia() {
     }
   });
 
-  return <div id="svganchor"></div>;
+  return (
+    <svg height={500}>
+      <g ref={visEl} />
+    </svg>
+  );
 }
