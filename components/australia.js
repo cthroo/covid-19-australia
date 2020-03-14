@@ -4,12 +4,9 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   container: {
-    height: '100vh',
+    height: '90vh',
     width: '100%',
-  },
-  footer: {
-    textAlign: 'right',
-  },
+  }
 }));
 
 export default function Australia() {
@@ -207,11 +204,7 @@ export default function Australia() {
           <g ref={visEl} />
         </svg>
       </div>
-      <div className={classes.footer}>
-        Made by <a href="https://www.cthroo.com">Cthroo</a>
-        <br />
-        buy me a coffee<a href="https://www.cthroo.com">☕</a>
-      </div>
+    
     </>
   );
 }
