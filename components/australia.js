@@ -1,12 +1,18 @@
 import React, {useRef} from 'react';
 import * as d3 from 'd3';
+import {makeStyles} from '@material-ui/core/styles';
 import aus from '../data/aus.json';
 
-if (typeof fetch !== 'function') {
-  global.fetch = require('node-fetch-polyfill');
-}
+const useStyles = makeStyles(theme => ({
+  root: {
+    height: '100vh',
+    width: '100%',
+  },
+}));
 
 export default function Australia() {
+  const classes = useStyles();
+
   const visEl = useRef(null);
   const svg = d3.select(visEl.current);
 
@@ -37,6 +43,11 @@ export default function Australia() {
       '#fccde5',
       '#d9d9d9',
     ]);
+
+  svg
+    .append('svg')
+    .attr('width', w)
+    .attr('height', h);
 
   //Load in GeoJSON data
   d3.json(aus, function(json) {
@@ -190,9 +201,5 @@ export default function Australia() {
     }
   });
 
-  return (
-    <svg height={h} width={w}>
-      <g ref={visEl} />
-    </svg>
-  );
+  return <div className={classes.root} href={visEl}></div>;
 }
