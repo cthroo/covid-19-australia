@@ -13,20 +13,20 @@ export default function Australia() {
     .append('g');
 
   //Width and height
-  var w = 750;
-  var h = 600;
+  const w = 750;
+  const h = 600;
 
   //Define map projection
-  var projection = d3
+  const projection = d3
     .geoMercator()
     .center([132, -28])
     .translate([w / 2, h / 2])
     .scale(840);
 
   //Define path generator
-  var path = d3.geoPath().projection(projection);
+  const path = d3.geoPath().projection(projection);
 
-  var color = d3
+  const color = d3
     .scalePoint()
     .range([
       '#8dd3c7',
@@ -42,20 +42,20 @@ export default function Australia() {
 
   //Load in GeoJSON data
   d3.json(aus, function(json) {
-    var states = svg
+    const states = svg
       .selectAll('path')
       .data(json.features)
       .enter()
       .append('path');
 
-    var names = svg
+    const names = svg
       .selectAll('text')
       .data(json.features)
       .enter()
       .append('text');
 
-    var australia;
-    var active = d3.select(null);
+    let australia;
+    const active = d3.select(null);
 
     states
       .attr('d', path)
@@ -76,7 +76,7 @@ export default function Australia() {
       })
       .attr('fill', 'darkslategray')
       .attr('transform', function(d) {
-        var centroid = path.centroid(d);
+        const centroid = path.centroid(d);
 
         if (d.properties.STATE_NAME != 'ACT') {
           return 'translate(' + centroid + ')';
@@ -109,7 +109,7 @@ export default function Australia() {
       if (active.node() === this) return reset();
       active = d3.select(this).classed('active', true);
 
-      var bounds = path.bounds(d),
+      const bounds = path.bounds(d),
         dx = bounds[1][0] - bounds[0][0],
         dy = bounds[1][1] - bounds[0][1],
         x = (bounds[0][0] + bounds[1][0]) / 2,
@@ -133,7 +133,7 @@ export default function Australia() {
         .transition()
         .duration(1000)
         .attr('opacity', function() {
-          var textclass = this.className.animVal.split(' ')[0];
+          const textclass = this.className.animVal.split(' ')[0];
           if (d.properties.STATE_NAME.replace(/\s/g, '') == textclass) {
             return 1;
           } else {
@@ -141,7 +141,7 @@ export default function Australia() {
           }
         });
 
-      var textclass = this.className.animVal.split(' ')[0];
+      const textclass = this.className.animVal.split(' ')[0];
       d3.select('text.' + textclass)
         .transition()
         .duration(1000)
@@ -172,7 +172,7 @@ export default function Australia() {
         .transition()
         .duration(1000)
         .attr('transform', function(d) {
-          var centroid = path.centroid(d);
+          const centroid = path.centroid(d);
 
           if (d.properties.STATE_NAME != 'ACT') {
             return 'translate(' + centroid + ')';
