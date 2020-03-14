@@ -26,6 +26,36 @@ const useStyles = makeStyles(theme => ({
   control: {
     padding: theme.spacing(2),
   },
+  diff: {
+    marginBottom: '8px',
+    fontWeight: 700,
+  },
+  value: {
+    fontSize: '32px',
+    fontWeight: 800,
+    marginBottom: '14px',
+  },
+  label: {
+    fontWeight: 700,
+  },
+  staActive: {
+    color: '#df0e1f',
+  },
+  staAritic: {
+    color: '#720405',
+  },
+  staDeceased: {
+    color: '#000000',
+  },
+  staTested: {
+    color: '#1da1f2',
+  },
+  staConfirmed: {
+    color: '#f44334',
+  },
+  staRecovered: {
+    color: '#259c1e',
+  },
 }));
 
 export default function InfoBoard() {
@@ -37,46 +67,46 @@ export default function InfoBoard() {
         <Grid container item xs={12} spacing={4}>
           <Grid item xs={4}>
             <div className={classes.staActive}>
-              <div class="diff">( +62 )</div>
-              <div class="value">644</div>
-              <div class="label">Active</div>
+              <div className={classes.diff}>( +62 )</div>
+              <div className={classes.value}>644</div>
+              <div className={classes.label}>Active</div>
             </div>
           </Grid>
           <Grid item xs={4}>
             <div className={classes.staAritic}>
-              <div class="diff">( +3 )</div>
-              <div class="value">35</div>
-              <div class="label">Critical</div>
+              <div className={classes.diff}>( +3 )</div>
+              <div className={classes.value}>35</div>
+              <div className={classes.label}>Critical</div>
             </div>
           </Grid>
           <Grid item xs={4}>
             <div className={classes.staDeceased}>
-              <div class="diff">( +3 )</div>
-              <div class="value">22</div>
-              <div class="label">Deaths</div>
+              <div className={classes.diff}>( +3 )</div>
+              <div className={classes.value}>22</div>
+              <div className={classes.label}>Deaths</div>
             </div>
           </Grid>
         </Grid>
         <Grid container item xs={12} spacing={4}>
           <Grid item xs={4}>
             <div className={classes.staTested}>
-              <div class="diff">( +829 )</div>
-              <div class="value">12060</div>
-              <div class="label">Tested</div>
+              <div className={classes.diff}>( +829 )</div>
+              <div className={classes.value}>12060</div>
+              <div className={classes.label}>Tested</div>
             </div>
           </Grid>
           <Grid item xs={4}>
             <div className={classes.staConfirmed}>
-              <div class="diff">( +69 )</div>
-              <div class="value">788</div>
-              <div class="label">Confirmed</div>
+              <div className={classes.diff}>( +69 )</div>
+              <div className={classes.value}>788</div>
+              <div className={classes.label}>Confirmed</div>
             </div>
           </Grid>
           <Grid item xs={4}>
             <div className={classes.staRecovered}>
-              <div class="diff">( +4 )</div>
-              <div class="value">122</div>
-              <div class="label">Recovered</div>
+              <div className={classes.diff}>( +4 )</div>
+              <div className={classes.value}>122</div>
+              <div className={classes.label}>Recovered</div>
             </div>
           </Grid>
         </Grid>
