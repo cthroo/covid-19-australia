@@ -2,6 +2,10 @@ import React, {useRef} from 'react';
 import * as d3 from 'd3';
 import aus from '../data/aus.json';
 
+if (typeof fetch !== 'function') {
+  global.fetch = require('node-fetch-polyfill');
+}
+
 export default function Australia() {
   const visEl = useRef(null);
 
