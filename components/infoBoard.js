@@ -35,7 +35,7 @@ export default function InfoBoard() {
     <div className={classes.root}>
       <Container className={classes.container} maxWidth="sm">
         <Grid container item xs={12} spacing={3}>
-          <div className={classes.staActive} data-tippy-content="Tooltip">
+          <div className={classes.staActive}>
             <div class="diff">( +62 )</div>
             <div class="value">644</div>
             <div class="label">Active</div>

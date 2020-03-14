@@ -3,10 +3,7 @@ import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
-  container: {
-    height: '90vh',
-    width: '100%',
-  }
+  container: {},
 }));
 
 export default function Australia() {
@@ -204,7 +201,6 @@ export default function Australia() {
           <g ref={visEl} />
         </svg>
       </div>
-    
     </>
   );
 }
