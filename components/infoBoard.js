@@ -9,14 +9,14 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     display: 'flex',
-    textAlign: 'center',
     paddingTop: '20px',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
     padding: '30px 10px',
-    maxWidth: '650px',
     margin: '0px auto',
+  },
+  subContainer: {
+    padding: '50px',
   },
   paper: {
     padding: theme.spacing(1),
@@ -64,19 +64,12 @@ export default function InfoBoard() {
   return (
     <div className={classes.root}>
       <Container className={classes.container} maxWidth="sm">
-        <Grid container item xs={12} spacing={4}>
+        <Grid container item xs={12} className={classes.subContainer}>
           <Grid item xs={4}>
             <div className={classes.staActive}>
               <div className={classes.diff}>( +62 )</div>
               <div className={classes.value}>644</div>
               <div className={classes.label}>Active</div>
-            </div>
-          </Grid>
-          <Grid item xs={4}>
-            <div className={classes.staAritic}>
-              <div className={classes.diff}>( +3 )</div>
-              <div className={classes.value}>35</div>
-              <div className={classes.label}>Critical</div>
             </div>
           </Grid>
           <Grid item xs={4}>
@@ -87,7 +80,7 @@ export default function InfoBoard() {
             </div>
           </Grid>
         </Grid>
-        <Grid container item xs={12} spacing={4}>
+        <Grid container item xs={12} className={classes.subContainer}>
           <Grid item xs={4}>
             <div className={classes.staTested}>
               <div className={classes.diff}>( +829 )</div>

@@ -205,7 +205,7 @@ export default function Australia() {
   return (
     <div className={classes.mapSection}>
       <div className={classes.title}>
-        Australia COVID-19 Coronavirus Tracker
+        Australia COVID-19 Coronavirus Tracker (updated 13.03.2020)
       </div>
       <div className={classes.container}>
         <svg height={600} width={750}>
