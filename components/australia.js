@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+import * as d3Geo from 'd3-geo';
 
 export default function Australia() {
   //Width and height
@@ -6,14 +7,14 @@ export default function Australia() {
   var h = 600;
 
   //Define map projection
-  var projection = d3.geo
-    .mercator()
+  var projection = d3
+    .geoMercator()
     .center([132, -28])
     .translate([w / 2, h / 2])
     .scale(840);
 
   //Define path generator
-  var path = d3.geo.path().projection(projection);
+  var path = d3Geo.path().projection(projection);
 
   var color = d3.scale
     .ordinal()
