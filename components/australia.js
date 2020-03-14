@@ -8,6 +8,9 @@ const useStyles = makeStyles(() => ({
     height: '100vh',
     width: '100%',
   },
+  footer: {
+    textAlign: 'right',
+  },
 }));
 
 export default function Australia() {
@@ -205,8 +208,9 @@ export default function Australia() {
   }, [aus]);
 
   return (
-    <div className={classes.container} href={visEl}>
-      COVID-19 Australia
-    </div>
+    <>
+      <div className={classes.container} ref={visEl}></div>
+      <div className={classes.footer}>made by Cthroo</div>
+    </>
   );
 }
