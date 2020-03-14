@@ -34,7 +34,7 @@ export default function Australia() {
     const path = d3.geoPath().projection(projection);
 
     const color = d3
-      .scalePoint()
+      .scaleOrdinal()
       .range([
         '#8dd3c7',
         '#ffffb3',
