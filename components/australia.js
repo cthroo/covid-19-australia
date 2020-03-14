@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
-import aus from '../data/aus.json';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -19,7 +18,6 @@ export default function Australia() {
   useEffect(() => {
     const svg = d3.select(visEl.current);
 
-    //Width and height
     const w = 750;
     const h = 600;
 
@@ -47,13 +45,8 @@ export default function Australia() {
         '#d9d9d9',
       ]);
 
-    svg
-      .append('svg')
-      .attr('width', w)
-      .attr('height', h);
-
     //Load in GeoJSON data
-    d3.json(aus, function(json) {
+    d3.json('/aus.json').then(function(json) {
       const states = svg
         .selectAll('path')
         .data(json.features)
@@ -67,7 +60,7 @@ export default function Australia() {
         .append('text');
 
       let australia;
-      const active = d3.select(null);
+      let active = d3.select(null);
 
       states
         .attr('d', path)
@@ -205,11 +198,15 @@ export default function Australia() {
           .attr('opacity', 0.1);
       }
     });
-  }, [aus]);
+  }, []);
 
   return (
     <>
-      <div className={classes.container} ref={visEl}></div>
+      <div className={classes.container}>
+        <svg height={600} width={750}>
+          <g ref={visEl} />
+        </svg>
+      </div>
       <div className={classes.footer}>made by Cthroo</div>
     </>
   );

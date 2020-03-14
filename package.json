@@ -14,9 +14,9 @@
     "d3-geo": "^1.11.9",
     "d3-geo-projection": "^2.8.1",
     "next": "9.3.0",
-    "node-fetch-polyfill": "^2.0.6",
     "prettier": "^1.19.1",
     "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react-dom": "16.13.0",
+    "whatwg-fetch": "2.0.4"
   }
 }

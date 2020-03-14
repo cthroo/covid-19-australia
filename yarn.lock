@@ -2697,13 +2697,6 @@ encodeurl@~1.0.2:
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
 
-encoding@^0.1.11:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
-  integrity sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
-  dependencies:
-    iconv-lite "~0.4.13"
-
 end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.4.tgz#5ae64a5f45057baf3626ec14da0ca5e4b2431eb0"
@@ -3299,7 +3292,7 @@ hyphenate-style-name@^1.0.3:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
   integrity sha512-EcuixamT82oplpoJ2XU4pDtKGWQ7b00CD9f1ug9IaQ3p1bkHMiKCZ9ut9QDI6qsa6cpUuB+A/I+zLtdNK4n2DQ==
 
-iconv-lite@0.4, iconv-lite@0.4.24, iconv-lite@~0.4.13:
+iconv-lite@0.4, iconv-lite@0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
@@ -3558,11 +3551,6 @@ is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   integrity sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==
   dependencies:
     isobject "^3.0.1"
-
-is-stream@^1.0.1, is-stream@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
-  integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
 
 is-typedarray@^1.0.0:
   version "1.0.0"
@@ -4310,15 +4298,6 @@ next@9.3.0:
     webpack-hot-middleware "2.25.0"
     webpack-sources "1.4.3"
 
-node-fetch-polyfill@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/node-fetch-polyfill/-/node-fetch-polyfill-2.0.6.tgz#073ce3ad6826bdb995a8728cfc4e3823f204407a"
-  integrity sha1-BzzjrWgmvbmVqHKM/E44I/IEQHo=
-  dependencies:
-    encoding "^0.1.11"
-    is-stream "^1.0.1"
-    node-web-streams "^0.2.1"
-
 node-fetch@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
@@ -4359,14 +4338,6 @@ node-releases@^1.1.44, node-releases@^1.1.50:
   integrity sha512-snSiT1UypkgGt2wxPqS6ImEUICbNCMb31yaxWrOLXjhlt2z2/IBpaOxzONExqSm4y5oLnAqjjRWu+wsDzK5yNQ==
   dependencies:
     semver "^6.3.0"
-
-node-web-streams@^0.2.1:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/node-web-streams/-/node-web-streams-0.2.2.tgz#087e76bbeb7e8dc56686b25db4e60c5ff9db091f"
-  integrity sha1-CH52u+t+jcVmhrJdtOYMX/nbCR8=
-  dependencies:
-    is-stream "^1.1.0"
-    web-streams-polyfill "git://github.com/gwicke/web-streams-polyfill#spec_performance_improvements"
 
 normalize-html-whitespace@1.0.0:
   version "1.0.0"
@@ -6295,10 +6266,6 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-"web-streams-polyfill@git://github.com/gwicke/web-streams-polyfill#spec_performance_improvements":
-  version "1.2.2"
-  resolved "git://github.com/gwicke/web-streams-polyfill#42c488428adea1dc0c0245014e4896ad456b1ded"
-
 webpack-dev-middleware@3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-3.7.0.tgz#ef751d25f4e9a5c8a35da600c5fda3582b5c6cff"
@@ -6370,6 +6337,11 @@ webpack@4.42.0:
     terser-webpack-plugin "^1.4.3"
     watchpack "^1.6.0"
     webpack-sources "^1.4.1"
+
+whatwg-fetch@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
+  integrity sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==
 
 whatwg-fetch@3.0.0:
   version "3.0.0"

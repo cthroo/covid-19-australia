@@ -1,10 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Australia from '../components/australia';
-
-if (typeof fetch !== 'function') {
-  global.fetch = require('node-fetch-polyfill');
-}
+import 'whatwg-fetch';
 
 const useStyles = makeStyles(theme => ({
   root: {
