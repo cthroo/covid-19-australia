@@ -77,59 +77,17 @@ const getData = location => {
   switch (location) {
     case "AUSTRALIA":
       return {
-        confirmedValue: data.NSW.todaySummarys.todayNewNumber+
-          data.VIC.todaySummarys.todayNewNumber+
-          data.TAS.todaySummarys.todayNewNumber+
-          data.SA.todaySummarys.todayNewNumber+
-          data.NT.todaySummarys.todayNewNumber+
-          data.WA.todaySummarys.todayNewNumber+
-          data.QLD.todaySummarys.todayNewNumber+
-          data.ACT.todaySummarys.todayNewNumber,
+        confirmedValue: data.AUS.todaySummarys.todayNewNumber,
         activeValue:
-          data.NSW.todaySummarys.totalConfirmedNumber+
-          data.VIC.todaySummarys.totalConfirmedNumber+
-          data.TAS.todaySummarys.totalConfirmedNumber+
-          data.SA.todaySummarys.totalConfirmedNumber+
-          data.NT.todaySummarys.totalConfirmedNumber+
-          data.WA.todaySummarys.totalConfirmedNumber+
-          data.QLD.todaySummarys.totalConfirmedNumber+
-          data.ACT.todaySummarys.totalConfirmedNumber,
+          data.AUS.todaySummarys.totalConfirmedNumber,
         // deathsDiff:
-        //   data.NSW.todaySummarys.totalDeathNumber+
-        //   data.VIC.todaySummarys.totalDeathNumber+
-        //   data.TAS.todaySummarys.totalDeathNumber+
-        //   data.SA.todaySummarys.totalDeathNumber+
-        //   data.NT.todaySummarys.totalDeathNumber+
-        //   data.WA.todaySummarys.totalDeathNumber+
-        //   data.QLD.todaySummarys.totalDeathNumber+
-        //   data.ACT.todaySummarys.totalDeathNumber,
+        //   data.AUS.todaySummarys.totalDeathNumber,
         deathsValue:
-          data.NSW.todaySummarys.totalDeathNumber+
-          data.VIC.todaySummarys.totalDeathNumber+
-          data.TAS.todaySummarys.totalDeathNumber+
-          data.SA.todaySummarys.totalDeathNumber+
-          data.NT.todaySummarys.totalDeathNumber+
-          data.WA.todaySummarys.totalDeathNumber+
-          data.QLD.todaySummarys.totalDeathNumber+
-          data.ACT.todaySummarys.totalDeathNumber,
+          data.AUS.todaySummarys.totalDeathNumber,
         activeDiff:
-          data.NSW.todaySummarys.totalRemianNumber+
-          data.VIC.todaySummarys.totalRemianNumber+
-          data.TAS.todaySummarys.totalRemianNumber+
-          data.SA.todaySummarys.totalRemianNumber+
-          data.NT.todaySummarys.totalRemianNumber+
-          data.WA.todaySummarys.totalRemianNumber+
-          data.QLD.todaySummarys.totalRemianNumber+
-          data.ACT.todaySummarys.totalRemianNumber,
+          data.AUS.todaySummarys.totalRemianNumber,
         recoveredValue:
-          data.NSW.todaySummarys.totalRecoveredNumber+
-          data.VIC.todaySummarys.totalRecoveredNumber+
-          data.TAS.todaySummarys.totalRecoveredNumber+
-          data.SA.todaySummarys.totalRecoveredNumber+
-          data.NT.todaySummarys.totalRecoveredNumber+
-          data.WA.todaySummarys.totalRecoveredNumber+
-          data.QLD.todaySummarys.totalRecoveredNumber+
-          data.ACT.todaySummarys.totalRecoveredNumber,
+          data.AUS.todaySummarys.totalRecoveredNumber,
       }
     case "New South Wales":
       return {

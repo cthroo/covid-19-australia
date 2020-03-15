@@ -6,3 +6,4 @@
   "totalRemianNumber": 1,
   "todayNewNumber": 0
 };
+    

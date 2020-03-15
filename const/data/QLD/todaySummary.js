@@ -6,3 +6,4 @@
   "totalRemianNumber": 38,
   "todayNewNumber": 0
 };
+    
