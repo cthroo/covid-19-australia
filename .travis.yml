@@ -5,7 +5,9 @@ stages:
   - build
 cache:
   directories:
-    - out
+    - $HOME/.cache/yarn
+    - node_modules
+    - .next/cache
 jobs:
   include:
     - stage: build
@@ -20,3 +22,4 @@ deploy:
   acl: public_read
   on:
     repo: cthroo/covid-19-australia
+  skip_cleanup: true
