@@ -58,12 +58,12 @@ export default function SpacingGrid() {
   return (
     <>
       <div className={classes.title}>
-        Share this site to your family 👨‍👩‍👧‍👧 and friends to keep them updated with
-        lastest information of covid-19 🦠 virus from government website
+        Share this site to your family 👨‍👩‍👧‍👧 and friends to keep updated <br />{' '}
+        with lastest statistics of covid-19 🦠 virus report
       </div>
       <div className={classes.subTitle}>
-        Wash 🧼 hands 👐 frequently! keep hygiene! Wish you and your family
-        healthy! 🤗
+        Wash 🧼 hands 👐 frequently! keep hygiene! We wish you and your family
+        always healthy! 🤗
       </div>
       <div className={classes.subTitle}>
         If you 💖 this project you can buy us a coffee ☕ to surport our work

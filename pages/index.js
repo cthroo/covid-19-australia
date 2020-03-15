@@ -59,6 +59,14 @@ export default function Index() {
             health.nsw.gov.au
           </a>{' '}
           <br />
+          <a href="https://www.health.qld.gov.au/" target="_black">
+            health.qld.gov.au
+          </a>{' '}
+          |{' '}
+          <a href="http://www.dhhs.vic.gov.au" target="_black">
+            dhhs.vic.gov.au
+          </a>{' '}
+          <br />
           If you ❤️ this project 👉
           <a onClick={handleClick}> please consider buying us a coffee ☕ 😊</a>
         </div>
