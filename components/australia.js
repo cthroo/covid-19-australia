@@ -26,6 +26,7 @@ export default function Australia({onLocationClick}) {
   const visEl = useRef(null);
   const [autoPlay, setAutoPlay] = useState(true);
   const [counter, setCounter] = useState(0);
+  let stopInterval;
 
   useEffect(() => {
     const svg = d3.select(visEl.current);
@@ -247,11 +248,13 @@ export default function Australia({onLocationClick}) {
     d3.select(`#${nextClickState}`).dispatch('click');
   };
 
-  const stopInterval = useInterval(handleInterval, 2000);
+  stopInterval = useInterval(handleInterval, 2000);
 
   useEffect(() => {
     if (!autoPlay) {
       stopInterval();
+    } else {
+      // stopInterval = useInterval(handleInterval, 2000);
     }
   }, [autoPlay]);
 
