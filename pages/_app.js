@@ -26,7 +26,6 @@ class MyApp extends App {
             <title>Covid-19</title>
           </Head>
           <ThemeProvider theme={theme}>
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <Component {...pageProps} />
           </ThemeProvider>
         </React.Fragment>
