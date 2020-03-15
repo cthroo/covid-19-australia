@@ -25,7 +25,7 @@ export default function Australia({onLocationClick}) {
   const classes = useStyles();
   const visEl = useRef(null);
   const [autoPlay, setAutoPlay] = useState(true);
-  const [autoPlayClickIndex, setAutoPlayClickIndex] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     const svg = d3.select(visEl.current);
@@ -234,20 +234,20 @@ export default function Australia({onLocationClick}) {
   };
 
   const handleInterval = () => {
-    if (autoPlayClickIndex > 0) {
-      d3.select(`#${locationD3Ids[autoPlayClickIndex]}`).dispatch('click');
+    if (counter > 0) {
+      d3.select(`#${locationD3Ids[counter]}`).dispatch('click');
     }
-    if (autoPlayClickIndex >= locationD3Ids.length) {
+    if (counter >= locationD3Ids.length) {
       console.log('reseeting');
       setAutoPlayClickIndex = 0;
     }
-    console.log('current auto index', autoPlayClickIndex);
-    const nextClickState = locationD3Ids[autoPlayClickIndex];
-    setAutoPlayClickIndex(autoPlayClickIndex + 1);
+    console.log('current auto index', counter);
+    const nextClickState = locationD3Ids[counter];
+    setCounter(counter + 1);
     d3.select(`#${nextClickState}`).dispatch('click');
   };
 
-  const stopInterval = useInterval(handleInterval, 5000);
+  const stopInterval = useInterval(handleInterval, 2000);
 
   useEffect(() => {
     if (!autoPlay) {
