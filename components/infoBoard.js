@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700,
   },
   value: {
-    fontSize: '32px',
+    fontSize: '70px',
     fontWeight: 800,
     marginBottom: '14px',
   },
@@ -61,7 +61,7 @@ export default function InfoBoard() {
 
   return (
     <div className={classes.root}>
-      <Container className={classes.container} maxWidth="sm">
+      <Container className={classes.container} maxWidth="m">
         <Grid container item xs={12} className={classes.subContainer}>
           <Grid item xs={4}>
             <div className={classes.staActive}>
