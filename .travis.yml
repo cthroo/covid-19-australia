@@ -6,7 +6,7 @@ stages:
 jobs:
   include:
     - stage: build
-    script: yarn build && yarn export
+      script: yarn build && yarn export
 deploy:
   provider: s3
   access_key_id: AKIAQIKY4ZO7ZZDFHZUI

@@ -1,5 +1,7 @@
 ## Covid-19-Australia
 
+[![Build Status](https://travis-ci.org/cthroo/covid-19-australia.svg?branch=master)](https://travis-ci.org/cthroo/covid-19-australia)
+
 ## PR welcome
 
 ## Getting Started
