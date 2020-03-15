@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     textAlign: 'center',
+    position: 'absolute',
+    width: '100%',
+    bottom: 0,
     color: 'white',
   },
 }));
@@ -34,9 +37,9 @@ export default function Index() {
           health.nsw.gov.au
         </a>
         <br />
-        If you want to support this project,{' '}
+        If you want to support this project 👉
         <a href="https://www.cthroo.com" target="_black">
-          buy me a coffee ☕
+          buy us a coffee ☕
         </a>
       </div>
 

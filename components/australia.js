@@ -11,9 +11,7 @@ const useStyles = makeStyles(() => ({
     marginTop: '20px',
     color: 'white',
   },
-  container: {
-    height: '90vh',
-  },
+  container: {},
 }));
 
 export default function Australia() {
