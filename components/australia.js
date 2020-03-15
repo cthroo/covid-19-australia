@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import useInterval from '../hooks/useInterval.js';
+import useInterval from '../hooks/useInterval';
 import {locationD3Ids} from '../const/locationsD3Id';
 
 const useStyles = makeStyles(() => ({
@@ -24,9 +24,10 @@ const useStyles = makeStyles(() => ({
 export default function Australia({onLocationClick}) {
   const classes = useStyles();
   const visEl = useRef(null);
-  const [autoPlay, setAutoPlay] = useState(true);
-  const [counter, setCounter] = useState(0);
-  let stopInterval;
+
+  const [count, setCount] = useState(0);
+  const [delay, setDelay] = useState(5000);
+  const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
     const svg = d3.select(visEl.current);
@@ -230,33 +231,26 @@ export default function Australia({onLocationClick}) {
     });
   }, []);
 
-  const handleAutoPlayClick = () => {
-    setAutoPlay(!autoPlay);
-  };
+  function handleDelayChange(e) {
+    setDelay(Number(e.target.value));
+  }
 
-  const handleInterval = () => {
-    if (counter > 0) {
-      d3.select(`#${locationD3Ids[counter]}`).dispatch('click');
-    }
-    if (counter >= locationD3Ids.length) {
-      console.log('reseeting');
-      setAutoPlayClickIndex = 0;
-    }
-    console.log('current auto index', counter);
-    const nextClickState = locationD3Ids[counter];
-    setCounter(counter + 1);
-    d3.select(`#${nextClickState}`).dispatch('click');
-  };
+  function handleIsRunningChange(e) {
+    setIsRunning(e.target.checked);
+  }
 
-  stopInterval = useInterval(handleInterval, 2000);
-
-  useEffect(() => {
-    if (!autoPlay) {
-      stopInterval();
-    } else {
-      // stopInterval = useInterval(handleInterval, 2000);
-    }
-  }, [autoPlay]);
+  useInterval(
+    () => {
+      if (count > 0) {
+        d3.select(`#${locationD3Ids[count]}`).dispatch('click');
+      }
+      const nextClickState = locationD3Ids[count];
+      console.log(count);
+      d3.select(`#${nextClickState}`).dispatch('click');
+      setCount(count + 1 > locationD3Ids.length - 1 ? 0 : count + 1);
+    },
+    isRunning ? delay : null,
+  );
 
   return (
     <div className={classes.mapSection}>
@@ -281,8 +275,8 @@ export default function Australia({onLocationClick}) {
             <Button
               variant="outlined"
               color="primary"
-              onClick={handleAutoPlayClick}>
-              {autoPlay ? 'Stop Auto Display' : 'Auto Display'}
+              onClick={handleIsRunningChange}>
+              {isRunning ? 'Stop Auto Display' : 'Auto Display'}
             </Button>
           </div>
         </Grid>
