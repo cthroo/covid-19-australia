@@ -84,86 +84,86 @@ const getData = location => {
       return {
         confirmedValue: data.AUS.todaySummarys.totalConfirmedNumber,
         activeValue:
-          data.AUS.todaySummarys.todayNewNumber,
+          data.AUS.todaySummarys.totalRemianNumber,
         // deathsDiff:
         //   data.AUS.todaySummarys.totalDeathNumber,
         deathsValue:
           data.AUS.todaySummarys.totalDeathNumber,
         activeDiff:
-          data.AUS.todaySummarys.totalRemianNumber,
+          data.AUS.todaySummarys.todayNewNumber,
         recoveredValue:
           data.AUS.todaySummarys.totalRecoveredNumber,
       }
     case "New South Wales":
       return {
         confirmedValue: data.NSW.todaySummarys.totalConfirmedNumber,
-        activeValue: data.NSW.todaySummarys.todayNewNumber,
+        activeValue: data.NSW.todaySummarys.totalRemianNumber,
         // deathsDiff: data.NSW.todaySummarys.totalDeathNumber,
         deathsValue: data.NSW.todaySummarys.totalDeathNumber,
-        activeDiff: data.NSW.todaySummarys.totalRemianNumber,
+        activeDiff: data.NSW.todaySummarys.todayNewNumber,
         recoveredValue: data.NSW.todaySummarys.totalRecoveredNumber,
       };
     case 'Victoria':
       return {
         confirmedValue: data.VIC.todaySummarys.totalConfirmedNumber,
-        activeValue: data.VIC.todaySummarys.todayNewNumber,
+        activeValue: data.VIC.todaySummarys.totalRemianNumber,
         // deathsDiff: data.VIC.todaySummarys.totalDeathNumber,
         deathsValue: data.VIC.todaySummarys.totalDeathNumber,
-        activeDiff: data.VIC.todaySummarys.totalRemianNumber,
+        activeDiff: data.VIC.todaySummarys.todayNewNumber,
         recoveredValue: data.VIC.todaySummarys.totalRecoveredNumber,
       };
     case 'Tasmania':
       return {
         confirmedValue: data.TAS.todaySummarys.totalConfirmedNumber,
-        activeValue: data.TAS.todaySummarys.todayNewNumber,
+        activeValue: data.TAS.todaySummarys.totalRemianNumber,
         // deathsDiff: data.TAS.todaySummarys.totalDeathNumber,
         deathsValue: data.TAS.todaySummarys.totalDeathNumber,
-        activeDiff: data.TAS.todaySummarys.totalRemianNumber,
+        activeDiff: data.TAS.todaySummarys.todayNewNumber,
         recoveredValue: data.TAS.todaySummarys.totalRecoveredNumber,
       };
     case 'South Australia':
       return {
         confirmedValue: data.SA.todaySummarys.totalConfirmedNumber,
-        activeValue: data.SA.todaySummarys.todayNewNumber,
+        activeValue: data.SA.todaySummarys.totalRemianNumber,
         // deathsDiff: data.SA.todaySummarys.totalDeathNumber,
         deathsValue: data.SA.todaySummarys.totalDeathNumber,
-        activeDiff: data.SA.todaySummarys.totalRemianNumber,
+        activeDiff: data.SA.todaySummarys.todayNewNumber,
         recoveredValue: data.SA.todaySummarys.totalRecoveredNumber,
       };
     case 'Northern Territory':
       return {
         confirmedValue: data.NT.todaySummarys.totalConfirmedNumber,
-        activeValue: data.NT.todaySummarys.todayNewNumber,
+        activeValue: data.NT.todaySummarys.totalRemianNumber,
         // deathsDiff: data.NT.todaySummarys.totalDeathNumber,
         deathsValue: data.NT.todaySummarys.totalDeathNumber,
-        activeDiff: data.NT.todaySummarys.totalRemianNumber,
+        activeDiff: data.NT.todaySummarys.todayNewNumber,
         recoveredValue: data.NT.todaySummarys.totalRecoveredNumber,
       };
     case 'Western Australia':
       return {
         confirmedValue: data.WA.todaySummarys.totalConfirmedNumber,
-        activeValue: data.WA.todaySummarys.todayNewNumber,
+        activeValue: data.WA.todaySummarys.totalRemianNumber,
         // deathsDiff: data.WA.todaySummarys.totalDeathNumber,
         deathsValue: data.WA.todaySummarys.totalDeathNumber,
-        activeDiff: data.WA.todaySummarys.totalRemianNumber,
+        activeDiff: data.WA.todaySummarys.todayNewNumber,
         recoveredValue: data.WA.todaySummarys.totalRecoveredNumber,
       };
     case 'Queensland':
       return {
         confirmedValue: data.QLD.todaySummarys.totalConfirmedNumber,
-        activeValue: data.QLD.todaySummarys.todayNewNumber,
+        activeValue: data.QLD.todaySummarys.totalRemianNumber,
         // deathsDiff: data.QLD.todaySummarys.totalDeathNumber,
         deathsValue: data.QLD.todaySummarys.totalDeathNumber,
-        activeDiff: data.QLD.todaySummarys.totalRemianNumber,
+        activeDiff: data.QLD.todaySummarys.todayNewNumber,
         recoveredValue: data.QLD.todaySummarys.totalRecoveredNumber,
       };
     case 'ACT':
       return {
         confirmedValue: data.ACT.todaySummarys.totalConfirmedNumber,
-        activeValue: data.ACT.todaySummarys.todayNewNumber,
+        activeValue: data.ACT.todaySummarys.totalRemianNumber,
         // deathsDiff: data.ACT.todaySummarys.totalDeathNumber,
         deathsValue: data.ACT.todaySummarys.totalDeathNumber,
-        activeDiff: data.ACT.todaySummarys.totalRemianNumber,
+        activeDiff: data.ACT.todaySummarys.todayNewNumber,
         recoveredValue: data.ACT.todaySummarys.totalRecoveredNumber,
       };
   }
