@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
 export default function Australia() {
   const classes = useStyles();
   const visEl = useRef(null);
-  const [autoPlay, setAutoPlay] = useState(false);
+  const [autoPlay, setAutoPlay] = useState(true);
 
   useEffect(() => {
     const svg = d3.select(visEl.current);
@@ -227,7 +227,7 @@ export default function Australia() {
           variant="outlined"
           color="primary"
           onClick={handleAutoPlayClick}>
-          Auto Display
+          {autoPlay ? 'Stop Auto Display' : 'Auto Display'}
         </Button>
       </div>
     </div>

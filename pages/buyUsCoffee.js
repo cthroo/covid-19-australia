@@ -1,13 +1,8 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import Router from 'next/router';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     color: '#ffffb3',
     fontSize: '25px',
     textAlign: 'center',
-    padding: '200px 0 50px 0',
+    padding: '50px 0 50px 0',
   },
   subTitle: {
     color: '#ffffb3',
@@ -78,26 +73,52 @@ export default function SpacingGrid() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container justify="center" spacing={spacing}>
-          <Grid item>
-            <Paper className={classes.paper}>
-              <img
-                src="/wechat.png"
-                alt="wechat"
-                width="100px"
-                height="100px"
-              />
-            </Paper>
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing={spacing}>
+            <Grid item>
+              <Paper className={classes.paper}>
+                <img
+                  src="/beemitlogo.png"
+                  alt="beemit"
+                  width="100px"
+                  height="100px"
+                />
+              </Paper>
+            </Grid>
+            <Grid item>
+              <Paper className={classes.paper}>
+                <img
+                  src="/beemitQR.jpeg"
+                  alt="beemit"
+                  width="100px"
+                  height="100px"
+                />
+              </Paper>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Paper className={classes.paper}>
-              <img
-                src="/wechatQR.png"
-                alt="wechat"
-                width="100px"
-                height="100px"
-              />
-            </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing={spacing}>
+            <Grid item>
+              <Paper className={classes.paper}>
+                <img
+                  src="/wechat.png"
+                  alt="wechat"
+                  width="100px"
+                  height="100px"
+                />
+              </Paper>
+            </Grid>
+            <Grid item>
+              <Paper className={classes.paper}>
+                <img
+                  src="/wechatQR.png"
+                  alt="wechat"
+                  width="100px"
+                  height="100px"
+                />
+              </Paper>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
