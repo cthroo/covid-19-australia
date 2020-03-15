@@ -73,26 +73,27 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const getData = location => {
-  console.log(location)
+  console.log(location);
   switch (location) {
-    case "AUSTRALIA":
+    case 'AUSTRALIA':
       return {
-        confirmedValue: data.NSW.todaySummarys.todayNewNumber+
-          data.VIC.todaySummarys.todayNewNumber+
-          data.TAS.todaySummarys.todayNewNumber+
-          data.SA.todaySummarys.todayNewNumber+
-          data.NT.todaySummarys.todayNewNumber+
-          data.WA.todaySummarys.todayNewNumber+
-          data.QLD.todaySummarys.todayNewNumber+
+        confirmedValue:
+          data.NSW.todaySummarys.todayNewNumber +
+          data.VIC.todaySummarys.todayNewNumber +
+          data.TAS.todaySummarys.todayNewNumber +
+          data.SA.todaySummarys.todayNewNumber +
+          data.NT.todaySummarys.todayNewNumber +
+          data.WA.todaySummarys.todayNewNumber +
+          data.QLD.todaySummarys.todayNewNumber +
           data.ACT.todaySummarys.todayNewNumber,
         activeValue:
-          data.NSW.todaySummarys.totalConfirmedNumber+
-          data.VIC.todaySummarys.totalConfirmedNumber+
-          data.TAS.todaySummarys.totalConfirmedNumber+
-          data.SA.todaySummarys.totalConfirmedNumber+
-          data.NT.todaySummarys.totalConfirmedNumber+
-          data.WA.todaySummarys.totalConfirmedNumber+
-          data.QLD.todaySummarys.totalConfirmedNumber+
+          data.NSW.todaySummarys.totalConfirmedNumber +
+          data.VIC.todaySummarys.totalConfirmedNumber +
+          data.TAS.todaySummarys.totalConfirmedNumber +
+          data.SA.todaySummarys.totalConfirmedNumber +
+          data.NT.todaySummarys.totalConfirmedNumber +
+          data.WA.todaySummarys.totalConfirmedNumber +
+          data.QLD.todaySummarys.totalConfirmedNumber +
           data.ACT.todaySummarys.totalConfirmedNumber,
         // deathsDiff:
         //   data.NSW.todaySummarys.totalDeathNumber+
@@ -104,34 +105,34 @@ const getData = location => {
         //   data.QLD.todaySummarys.totalDeathNumber+
         //   data.ACT.todaySummarys.totalDeathNumber,
         deathsValue:
-          data.NSW.todaySummarys.totalDeathNumber+
-          data.VIC.todaySummarys.totalDeathNumber+
-          data.TAS.todaySummarys.totalDeathNumber+
-          data.SA.todaySummarys.totalDeathNumber+
-          data.NT.todaySummarys.totalDeathNumber+
-          data.WA.todaySummarys.totalDeathNumber+
-          data.QLD.todaySummarys.totalDeathNumber+
+          data.NSW.todaySummarys.totalDeathNumber +
+          data.VIC.todaySummarys.totalDeathNumber +
+          data.TAS.todaySummarys.totalDeathNumber +
+          data.SA.todaySummarys.totalDeathNumber +
+          data.NT.todaySummarys.totalDeathNumber +
+          data.WA.todaySummarys.totalDeathNumber +
+          data.QLD.todaySummarys.totalDeathNumber +
           data.ACT.todaySummarys.totalDeathNumber,
         activeDiff:
-          data.NSW.todaySummarys.totalRemianNumber+
-          data.VIC.todaySummarys.totalRemianNumber+
-          data.TAS.todaySummarys.totalRemianNumber+
-          data.SA.todaySummarys.totalRemianNumber+
-          data.NT.todaySummarys.totalRemianNumber+
-          data.WA.todaySummarys.totalRemianNumber+
-          data.QLD.todaySummarys.totalRemianNumber+
+          data.NSW.todaySummarys.totalRemianNumber +
+          data.VIC.todaySummarys.totalRemianNumber +
+          data.TAS.todaySummarys.totalRemianNumber +
+          data.SA.todaySummarys.totalRemianNumber +
+          data.NT.todaySummarys.totalRemianNumber +
+          data.WA.todaySummarys.totalRemianNumber +
+          data.QLD.todaySummarys.totalRemianNumber +
           data.ACT.todaySummarys.totalRemianNumber,
         recoveredValue:
-          data.NSW.todaySummarys.totalRecoveredNumber+
-          data.VIC.todaySummarys.totalRecoveredNumber+
-          data.TAS.todaySummarys.totalRecoveredNumber+
-          data.SA.todaySummarys.totalRecoveredNumber+
-          data.NT.todaySummarys.totalRecoveredNumber+
-          data.WA.todaySummarys.totalRecoveredNumber+
-          data.QLD.todaySummarys.totalRecoveredNumber+
+          data.NSW.todaySummarys.totalRecoveredNumber +
+          data.VIC.todaySummarys.totalRecoveredNumber +
+          data.TAS.todaySummarys.totalRecoveredNumber +
+          data.SA.todaySummarys.totalRecoveredNumber +
+          data.NT.todaySummarys.totalRecoveredNumber +
+          data.WA.todaySummarys.totalRecoveredNumber +
+          data.QLD.todaySummarys.totalRecoveredNumber +
           data.ACT.todaySummarys.totalRecoveredNumber,
-      }
-    case "New South Wales":
+      };
+    case 'New South Wales':
       return {
         confirmedValue: data.NSW.todaySummarys.todayNewNumber,
         activeValue: data.NSW.todaySummarys.totalConfirmedNumber,
@@ -139,8 +140,8 @@ const getData = location => {
         deathsValue: data.NSW.todaySummarys.totalDeathNumber,
         activeDiff: data.NSW.todaySummarys.totalRemianNumber,
         recoveredValue: data.NSW.todaySummarys.totalRecoveredNumber,
-      }
-    case "Victoria":
+      };
+    case 'Victoria':
       return {
         confirmedValue: data.VIC.todaySummarys.todayNewNumber,
         activeValue: data.VIC.todaySummarys.totalConfirmedNumber,
@@ -148,8 +149,8 @@ const getData = location => {
         deathsValue: data.VIC.todaySummarys.totalDeathNumber,
         activeDiff: data.VIC.todaySummarys.totalRemianNumber,
         recoveredValue: data.VIC.todaySummarys.totalRecoveredNumber,
-      }
-    case "Tasmania":
+      };
+    case 'Tasmania':
       return {
         confirmedValue: data.TAS.todaySummarys.todayNewNumber,
         activeValue: data.TAS.todaySummarys.totalConfirmedNumber,
@@ -157,8 +158,8 @@ const getData = location => {
         deathsValue: data.TAS.todaySummarys.totalDeathNumber,
         activeDiff: data.TAS.todaySummarys.totalRemianNumber,
         recoveredValue: data.TAS.todaySummarys.totalRecoveredNumber,
-      }
-    case "South Australia":
+      };
+    case 'South Australia':
       return {
         confirmedValue: data.SA.todaySummarys.todayNewNumber,
         activeValue: data.SA.todaySummarys.totalConfirmedNumber,
@@ -166,8 +167,8 @@ const getData = location => {
         deathsValue: data.SA.todaySummarys.totalDeathNumber,
         activeDiff: data.SA.todaySummarys.totalRemianNumber,
         recoveredValue: data.SA.todaySummarys.totalRecoveredNumber,
-      }
-    case "Northern Territory":
+      };
+    case 'Northern Territory':
       return {
         confirmedValue: data.NT.todaySummarys.todayNewNumber,
         activeValue: data.NT.todaySummarys.totalConfirmedNumber,
@@ -175,8 +176,8 @@ const getData = location => {
         deathsValue: data.NT.todaySummarys.totalDeathNumber,
         activeDiff: data.NT.todaySummarys.totalRemianNumber,
         recoveredValue: data.NT.todaySummarys.totalRecoveredNumber,
-      }
-    case "Western Australia":
+      };
+    case 'Western Australia':
       return {
         confirmedValue: data.WA.todaySummarys.todayNewNumber,
         activeValue: data.WA.todaySummarys.totalConfirmedNumber,
@@ -184,8 +185,8 @@ const getData = location => {
         deathsValue: data.WA.todaySummarys.totalDeathNumber,
         activeDiff: data.WA.todaySummarys.totalRemianNumber,
         recoveredValue: data.WA.todaySummarys.totalRecoveredNumber,
-      }
-    case "Queensland":
+      };
+    case 'Queensland':
       return {
         confirmedValue: data.QLD.todaySummarys.todayNewNumber,
         activeValue: data.QLD.todaySummarys.totalConfirmedNumber,
@@ -193,8 +194,8 @@ const getData = location => {
         deathsValue: data.QLD.todaySummarys.totalDeathNumber,
         activeDiff: data.QLD.todaySummarys.totalRemianNumber,
         recoveredValue: data.QLD.todaySummarys.totalRecoveredNumber,
-      }
-    case "ACT":
+      };
+    case 'ACT':
       return {
         confirmedValue: data.ACT.todaySummarys.todayNewNumber,
         activeValue: data.ACT.todaySummarys.totalConfirmedNumber,
@@ -202,14 +203,14 @@ const getData = location => {
         deathsValue: data.ACT.todaySummarys.totalDeathNumber,
         activeDiff: data.ACT.todaySummarys.totalRemianNumber,
         recoveredValue: data.ACT.todaySummarys.totalRecoveredNumber,
-      }
+      };
   }
-}
+};
 
 export default function InfoBoard({location}) {
   const classes = useStyles();
 
-  const d = getData(location)
+  const d = getData(location);
 
   return (
     <div className={classes.root}>
@@ -231,7 +232,7 @@ export default function InfoBoard({location}) {
           </Grid>
           <Grid item xs={6} md={4}>
             <div className={classes.staDeceased}>
-              <div className={classes.diff}>( +62 )</div>
+              <div className={classes.diff}>( +0 )</div>
               <div className={classes.value}>{d.deathsValue}</div>
               <div className={classes.label}>Deaths</div>
             </div>
@@ -241,7 +242,7 @@ export default function InfoBoard({location}) {
           <Grid item xs={6} md={4}>
             <div className={classes.staTested}>
               <div className={classes.diff}>( +829 )</div>
-              <div className={classes.value}>1M</div>
+              <div className={classes.value}>22567</div>
               <div className={classes.label}>Tested</div>
             </div>
           </Grid>
