@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   subContainer: {
     padding: '50px',
+    textAlign: 'center',
   },
   paper: {
     padding: theme.spacing(1),
@@ -25,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
   },
   diff: {
+    fontSize: '25px',
     marginBottom: '8px',
     fontWeight: 700,
   },
@@ -34,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '14px',
   },
   label: {
+    fontSize: '30px',
     fontWeight: 700,
   },
   staActive: {
@@ -54,6 +57,9 @@ const useStyles = makeStyles(theme => ({
   staRecovered: {
     color: '#259c1e',
   },
+  text: {
+    textAlign: 'center',
+  },
 }));
 
 export default function InfoBoard() {
@@ -61,7 +67,7 @@ export default function InfoBoard() {
 
   return (
     <div className={classes.root}>
-      <Container className={classes.container} maxWidth="m">
+      <Container className={classes.container} maxWidth="lg">
         <Grid container item xs={12} className={classes.subContainer}>
           <Grid item xs={4}>
             <div className={classes.staActive}>
@@ -82,7 +88,7 @@ export default function InfoBoard() {
           <Grid item xs={4}>
             <div className={classes.staTested}>
               <div className={classes.diff}>( +829 )</div>
-              <div className={classes.value}>12060</div>
+              <div className={classes.value}>1206000</div>
               <div className={classes.label}>Tested</div>
             </div>
           </Grid>
