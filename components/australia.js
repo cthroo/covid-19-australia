@@ -7,7 +7,7 @@ import useInterval from '../hooks/useInterval.js';
 const useStyles = makeStyles(() => ({
   mapSection: {},
   title: {
-    fontSize: '20px',
+    fontSize: '28px',
     textAlign: 'center',
     marginTop: '20px',
     color: 'white',
@@ -15,6 +15,7 @@ const useStyles = makeStyles(() => ({
   container: {},
   buttonControl: {
     textAlign: 'center',
+    color: 'white',
   },
 }));
 
