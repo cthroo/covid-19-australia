@@ -46,8 +46,8 @@ export default function Index() {
   };
 
   return (
-    <div className={classes.container}>
-      <Grid>
+    <Grid className={classes.container}>
+      <Grid container>
         <Grid item xs={12} lg={6}>
           <Australia onLocationClick={onLocationClick} />
         </Grid>
@@ -95,6 +95,6 @@ export default function Index() {
           font-size: 13px;
         }
       `}</style>
-    </div>
+    </Grid>
   );
 }
