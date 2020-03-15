@@ -39,6 +39,12 @@ const useStyles = makeStyles(theme => ({
     fontSize: '30px',
     fontWeight: 700,
   },
+  location: {
+    fontSize: '60px',
+  },
+  staState: {
+    color: '#e4e4e4',
+  },
   staActive: {
     color: '#df0e1f',
   },
@@ -68,6 +74,13 @@ export default function InfoBoard() {
   return (
     <div className={classes.root}>
       <Container className={classes.container} maxWidth="lg">
+        <Grid container item xs={12} className={classes.subContainer}>
+          <Grid item xs={4}>
+            <div className={classes.staState}>
+              <div className={classes.location}>Nation Wide</div>
+            </div>
+          </Grid>
+        </Grid>
         <Grid container item xs={12} className={classes.subContainer}>
           <Grid item xs={4}>
             <div className={classes.staActive}>
