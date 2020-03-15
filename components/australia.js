@@ -204,11 +204,8 @@ export default function Australia() {
           .duration(1000)
           .attr('opacity', 0.1);
       }
-      useInterval(() => {
-        console.log('click a state');
-      }, 5000);
     });
-  }, [autoPlay]);
+  }, []);
 
   const handleAutoPlayClick = () => {
     setAutoPlay(!autoPlay);
