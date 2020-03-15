@@ -22,7 +22,12 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     width: '100%',
     color: '#fffccc',
-    bottom: 0,
+    [theme.breakpoints.up('md')]: {
+      bottom: 0,
+    },
+    [theme.breakpoints.down('md')]: {
+      paddingBottom: '50px',
+    },
   },
 }));
 
@@ -40,27 +45,27 @@ export default function Index() {
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.mainContent}>
-        <Grid container className={classes.root} spacing={2}>
-          <Grid item xs={12} md={6}>
-            <Australia onLocationClick={onLocationClick} />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <InfoBoard location={location} />
-          </Grid>
+    <Grid container xs={12} className={classes.container}>
+      <Grid container xs={12}>
+        <Grid item xs={12} md={6}>
+          <Australia onLocationClick={onLocationClick} />
         </Grid>
-      </div>
-      <div className={classes.footer}>
-        Made and maintained by{' '}
-        <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source:{' '}
-        <a href="https://www.health.nsw.gov.au/" target="_black">
-          health.nsw.gov.au
-        </a>
-        <br />
-        If you ❤️ this project 👉
-        <a onClick={handleClick}> maybe you can buy us a coffee ☕ 😊</a>
-      </div>
+        <Grid item xs={12} md={6}>
+          <InfoBoard location={location} />
+        </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <div className={classes.footer}>
+          Made and maintained by{' '}
+          <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source:{' '}
+          <a href="https://www.health.nsw.gov.au/" target="_black">
+            health.nsw.gov.au
+          </a>
+          <br />
+          If you ❤️ this project 👉
+          <a onClick={handleClick}> maybe you can buy us a coffee ☕ 😊</a>
+        </div>
+      </Grid>
 
       <style jsx>{`
         :global(body) {
@@ -89,6 +94,6 @@ export default function Index() {
           font-size: 13px;
         }
       `}</style>
-    </div>
+    </Grid>
   );
 }
