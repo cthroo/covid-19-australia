@@ -1,3 +1,6 @@
+/*
+ * Created by Robert Chang 15 March 2020
+ */
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -46,7 +49,7 @@ export default function SpacingGrid() {
   return (
     <>
       <div className={classes.title}>
-        If you 💖 this project you can buy us a coffee ☕:
+        If you 💖 this project you can buy us a coffee ☕
       </div>
       <div className={classes.subTitle}>😊 Thank you for your support!</div>
       <Grid container className={classes.root} spacing={10}>
@@ -126,7 +129,7 @@ export default function SpacingGrid() {
 
       <Grid container justify="center" spacing={spacing}>
         <div className={classes.githubLinks}>
-          If you want to contribute to the sourcecode, please go to our Github
+          If you want to contribute to the source code, please go to our Github
           page: {'  '}
           <a
             target="_black"

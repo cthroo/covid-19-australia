@@ -1,3 +1,6 @@
+/*
+ * Created by Robert Chang 15 March 2020
+ */
 export const locationD3Ids = [
   'location-NewSouthWales',
   'location-NewSouthWales',

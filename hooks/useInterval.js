@@ -1,3 +1,6 @@
+/*
+ * Created by Robert Chang 15 March 2020
+ */
 import {useState, useEffect, useRef} from 'react';
 
 export default function useInterval(callback, delay) {
