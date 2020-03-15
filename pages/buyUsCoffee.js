@@ -105,7 +105,7 @@ export default function SpacingGrid() {
                   width="100px"
                   height="100px"
                 />
-                Beemit
+                Beem it
               </Paper>
             </Grid>
             <Grid item>

@@ -241,7 +241,7 @@ export default function InfoBoard({location}) {
           <Grid item xs={6} md={4}>
             <div className={classes.staTested}>
               <div className={classes.diff}>( +829 )</div>
-              <div className={classes.value}>1206000</div>
+              <div className={classes.value}>1M</div>
               <div className={classes.label}>Tested</div>
             </div>
           </Grid>
