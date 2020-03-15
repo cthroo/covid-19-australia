@@ -10,13 +10,8 @@ import {useRouter} from 'next/router';
 import 'whatwg-fetch';
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
+  root: {
     flexGrow: 1,
-  },
-  mainContent: {
-    display: 'flex',
   },
   footer: {
     textAlign: 'center',
@@ -46,8 +41,8 @@ export default function Index() {
   };
 
   return (
-    <Grid className={classes.container}>
-      <Grid container>
+    <>
+      <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} lg={6}>
           <Australia onLocationClick={onLocationClick} />
         </Grid>
@@ -67,6 +62,6 @@ export default function Index() {
           <a onClick={handleClick}> maybe you can buy us a coffee ☕ 😊</a>
         </div>
       </Grid>
-    </Grid>
+    </>
   );
 }
