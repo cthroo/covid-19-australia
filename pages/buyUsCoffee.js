@@ -55,9 +55,17 @@ export default function SpacingGrid() {
   return (
     <>
       <div className={classes.title}>
-        If you 💖 this project you can buy us a coffee ☕
+        Share this site to your family 👨‍👩‍👧‍👧 and friends to keep them updated with
+        covid-19 🦠 virus
       </div>
-      <div className={classes.subTitle}>😊 Thank you for your support!</div>
+      <div className={classes.subTitle}>
+        Wash 🧼 hands 👐 frequently! keep hygiene! Wish you and your family
+        healthy! 🤗
+      </div>
+      <div className={classes.subTitle}>
+        If you 💖 this project you can buy us a coffee ☕ to surport our work
+      </div>
+      <div className={classes.subTitle}>😊 Thank you!</div>
       <Grid container className={classes.root} spacing={10}>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={spacing}>
