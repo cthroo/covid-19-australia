@@ -4,6 +4,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import useInterval from '../hooks/useInterval.js';
+import {locationD3Ids} from '../const/locationsD3Id';
 
 const useStyles = makeStyles(() => ({
   mapSection: {},
@@ -24,6 +25,7 @@ export default function Australia({onLocationClick}) {
   const classes = useStyles();
   const visEl = useRef(null);
   const [autoPlay, setAutoPlay] = useState(true);
+  const [autoPlayClickIndex, setAutoPlayClickIndex] = useState(0);
 
   useEffect(() => {
     const svg = d3.select(visEl.current);
@@ -84,6 +86,10 @@ export default function Australia({onLocationClick}) {
         .attr('d', path)
         .attr('class', function(d) {
           return d.properties.STATE_NAME.replace(/\s/g, '');
+        })
+        .attr('id', function(d, i) {
+          console.log('location-' + d.properties.STATE_NAME.replace(/\s/g, ''));
+          return 'location-' + d.properties.STATE_NAME.replace(/\s/g, '');
         })
         .attr('stroke', 'dimgray')
         .attr('opacity', 1)
@@ -226,6 +232,28 @@ export default function Australia({onLocationClick}) {
   const handleAutoPlayClick = () => {
     setAutoPlay(!autoPlay);
   };
+
+  const handleInterval = () => {
+    if (autoPlayClickIndex > 0) {
+      d3.select(`#${locationD3Ids[autoPlayClickIndex]}`).dispatch('click');
+    }
+    if (autoPlayClickIndex >= locationD3Ids.length) {
+      console.log('reseeting');
+      setAutoPlayClickIndex = 0;
+    }
+    console.log('current auto index', autoPlayClickIndex);
+    const nextClickState = locationD3Ids[autoPlayClickIndex];
+    setAutoPlayClickIndex(autoPlayClickIndex + 1);
+    d3.select(`#${nextClickState}`).dispatch('click');
+  };
+
+  const stopInterval = useInterval(handleInterval, 5000);
+
+  useEffect(() => {
+    if (!autoPlay) {
+      stopInterval();
+    }
+  }, [autoPlay]);
 
   return (
     <div className={classes.mapSection}>
