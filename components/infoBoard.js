@@ -82,14 +82,14 @@ export default function InfoBoard({location}) {
           </Grid>
         </Grid>
         <Grid container item xs={12} className={classes.subContainer}>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className={classes.staActive}>
               <div className={classes.diff}>( +62 )</div>
               <div className={classes.value}>644</div>
               <div className={classes.label}>Active</div>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className={classes.staDeceased}>
               <div className={classes.diff}>( +3 )</div>
               <div className={classes.value}>22</div>
@@ -98,21 +98,21 @@ export default function InfoBoard({location}) {
           </Grid>
         </Grid>
         <Grid container item xs={12} className={classes.subContainer}>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className={classes.staTested}>
               <div className={classes.diff}>( +829 )</div>
               <div className={classes.value}>1206000</div>
               <div className={classes.label}>Tested</div>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className={classes.staConfirmed}>
               <div className={classes.diff}>( +69 )</div>
               <div className={classes.value}>788</div>
               <div className={classes.label}>Confirmed</div>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className={classes.staRecovered}>
               <div className={classes.diff}>( +4 )</div>
               <div className={classes.value}>122</div>

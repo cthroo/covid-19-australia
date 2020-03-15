@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Australia from '../components/australia';
 import InfoBoard from '../components/infoBoard';
+import Grid from '@material-ui/core/Grid';
 import 'whatwg-fetch';
 
 const useStyles = makeStyles(theme => ({
@@ -16,7 +17,6 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     position: 'absolute',
     width: '100%',
-    bottom: 0,
     color: '#fffccc',
   },
 }));
@@ -32,8 +32,14 @@ export default function Index() {
   return (
     <div className={classes.container}>
       <div className={classes.mainContent}>
-        <Australia onLocationClick={onLocationClick} />
-        <InfoBoard location={location} />
+        <Grid container className={classes.root} spacing={2}>
+          <Grid item xs={12} md={6}>
+            <Australia onLocationClick={onLocationClick} />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <InfoBoard location={location} />
+          </Grid>
+        </Grid>
       </div>
       <div className={classes.footer}>
         Made and maintained by{' '}
