@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     width: '100%',
     color: '#fffccc',
+    bottom: 0,
   },
 }));
 

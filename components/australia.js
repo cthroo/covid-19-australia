@@ -2,6 +2,7 @@ import React, {useEffect, useState, useRef} from 'react';
 import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import useInterval from '../hooks/useInterval.js';
 
 const useStyles = makeStyles(() => ({
@@ -228,22 +229,33 @@ export default function Australia({onLocationClick}) {
 
   return (
     <div className={classes.mapSection}>
-      <div className={classes.title}>
-        Australia COVID-19 Coronavirus Tracker <br /> (updated 15.03.2020 17:00)
-      </div>
-      <div className={classes.container}>
-        <svg height={600} width={750}>
-          <g ref={visEl} />
-        </svg>
-      </div>
-      <div className={classes.buttonControl}>
-        <Button
-          variant="outlined"
-          color="primary"
-          onClick={handleAutoPlayClick}>
-          {autoPlay ? 'Stop Auto Display' : 'Auto Display'}
-        </Button>
-      </div>
+      <Grid container spacing={2} justify="center">
+        <Grid item xs={12}>
+          <div className={classes.title}>
+            Australia COVID-19 Coronavirus Tracker <br /> (updated 15.03.2020
+            17:00)
+          </div>
+        </Grid>
+
+        <Grid item xs={12}>
+          <div className={classes.container}>
+            <svg height={600} width={750}>
+              <g ref={visEl} />
+            </svg>
+          </div>
+        </Grid>
+
+        <Grid item xs={12}>
+          <div className={classes.buttonControl}>
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={handleAutoPlayClick}>
+              {autoPlay ? 'Stop Auto Display' : 'Auto Display'}
+            </Button>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 }
