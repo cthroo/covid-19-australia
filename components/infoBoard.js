@@ -4,9 +4,7 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
+  root: {},
   container: {
     display: 'flex',
     paddingTop: '20px',
