@@ -42,6 +42,11 @@ export default function Australia() {
     /*
      * 1. NSW
      * 2. VIC
+     * 3. QLD
+     * 4. SA
+     * 5. WA
+     *
+     * to do: draw color based on number of infections
      */
     const color = d3
       .scaleOrdinal()
