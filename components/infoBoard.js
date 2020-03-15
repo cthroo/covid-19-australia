@@ -82,9 +82,9 @@ const getData = location => {
   switch (location) {
     case 'AUSTRALIA':
       return {
-        confirmedValue: data.AUS.todaySummarys.todayNewNumber,
+        confirmedValue: data.AUS.todaySummarys.totalConfirmedNumber,
         activeValue:
-          data.AUS.todaySummarys.totalConfirmedNumber,
+          data.AUS.todaySummarys.todayNewNumber,
         // deathsDiff:
         //   data.AUS.todaySummarys.totalDeathNumber,
         deathsValue:
