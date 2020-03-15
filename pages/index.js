@@ -46,7 +46,7 @@ export default function Index() {
   };
 
   return (
-    <Grid className={classes.container}>
+    <Grid container className={classes.container}>
       <Grid container>
         <Grid item xs={12} lg={6}>
           <Australia onLocationClick={onLocationClick} />
@@ -67,34 +67,6 @@ export default function Index() {
           <a onClick={handleClick}> maybe you can buy us a coffee ☕ 😊</a>
         </div>
       </Grid>
-
-      <style jsx>{`
-        :global(body) {
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-            Helvetica, sans-serif;
-          background: #222222;
-        }
-        nav {
-          text-align: center;
-        }
-        ul {
-          display: flex;
-          justify-content: space-between;
-        }
-        nav > ul {
-          padding: 4px 16px;
-        }
-        li {
-          display: flex;
-          padding: 6px 8px;
-        }
-        a {
-          color: #067df7;
-          text-decoration: none;
-          font-size: 13px;
-        }
-      `}</style>
     </Grid>
   );
 }

@@ -5,7 +5,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import {data} from '../const/data'
+import {data} from '../const/data';
 
 const useStyles = makeStyles(theme => ({
   root: {},
