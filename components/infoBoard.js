@@ -31,6 +31,7 @@ const Control = styled.div`
 `;
 
 const Diff = styled.div`
+  height: 29px;
   font-size: 25px;
   margin-bottom: 8px;
   font-weight: 700;
@@ -191,7 +192,7 @@ export default function InfoBoard({location}) {
           </Grid>
           <Grid item xs={6} md={4}>
             <StaDeceased>
-              <Diff>( +0 )</Diff>
+              <Diff></Diff>
               <Value>{d.deathsValue}</Value>
               <Label>Deaths</Label>
             </StaDeceased>
@@ -199,28 +200,28 @@ export default function InfoBoard({location}) {
         </SubContainer>
         <SubContainer container item xs={12}>
           <Grid item xs={6} md={4}>
-            <StaTested>
+            {/* <StaTested>
               <Diff>( +829 )</Diff>
               <Value>22.5K</Value>
               <Label>Tested</Label>
-            </StaTested>
+            </StaTested> */}
           </Grid>
           <Grid item xs={6} md={4}>
             <StaConfirmed>
-              <Diff>( +69 )</Diff>
+              <Diff></Diff>
               <Value>{d.confirmedValue}</Value>
               <Label>Confirmed</Label>
             </StaConfirmed>
           </Grid>
           <Grid item xs={6} md={4}>
             <StaRecovered>
-              <Diff>( +4 )</Diff>
+              <Diff></Diff>
               <Value>{d.recoveredValue}</Value>
               <Label>Recovered</Label>
             </StaRecovered>
           </Grid>
         </SubContainer>
-qg      </Container>
+      </Container>
     </div>
   );
 }
