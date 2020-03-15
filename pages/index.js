@@ -53,7 +53,7 @@ export default function Index() {
         </a>
         <br />
         If you ❤️ this project 👉
-        <a href="/buyUsCoffee"> you could buy us a coffee ☕ 😊</a>
+        <a href="/buyUsCoffee"> maybe you can buy us a coffee ☕ 😊</a>
       </div>
 
       <style jsx>{`
