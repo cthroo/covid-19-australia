@@ -20,11 +20,11 @@
     "d3-geo": "^1.11.9",
     "d3-geo-projection": "^2.8.1",
     "graphql": "^14.6.0",
-    "next": "9.3.0",
+    "next": "9.2.0",
     "next-with-apollo": "^5.0.0",
     "prettier": "^1.19.1",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "whatwg-fetch": "2.0.4"
   }
 }
