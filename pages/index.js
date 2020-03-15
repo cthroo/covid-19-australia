@@ -29,10 +29,15 @@ export default function Index() {
       </div>
       <div className={classes.footer}>
         Made and maintained by <a href="https://www.cthroo.com">Cthroo</a> |
-        Data source: health.nsw.gov.au
+        Data source:{' '}
+        <a href="https://www.health.nsw.gov.au/" target="_black">
+          health.nsw.gov.au
+        </a>
         <br />
         If you want to support this project,{' '}
-        <a href="https://www.cthroo.com">buy me a coffee ☕</a>
+        <a href="https://www.cthroo.com" target="_black">
+          buy me a coffee ☕
+        </a>
       </div>
 
       <style jsx>{`
