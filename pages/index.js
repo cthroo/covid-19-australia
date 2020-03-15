@@ -31,16 +31,14 @@ export default function Index() {
         <InfoBoard />
       </div>
       <div className={classes.footer}>
-        Made and maintained by <a href="https://www.cthroo.com">Cthroo</a> |
-        Data source:{' '}
+        Made and maintained by{' '}
+        <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source:{' '}
         <a href="https://www.health.nsw.gov.au/" target="_black">
           health.nsw.gov.au
         </a>
         <br />
         If you want to support this project 👉
-        <a href="https://www.cthroo.com" target="_black">
-          buy us a coffee ☕
-        </a>
+        <a href="/buyUsCoffee">buy us a coffee ☕</a>
       </div>
 
       <style jsx>{`
