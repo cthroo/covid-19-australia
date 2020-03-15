@@ -2,53 +2,40 @@
  * Created by Robert Chang 15 March 2020
  */
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import styled from 'styled-components';
+import PaperImp from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import {useRouter} from 'next/router';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    height: 140,
-    width: 100,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  control: {
-    padding: theme.spacing(2),
-  },
-  title: {
-    color: '#ffffb3',
-    fontSize: '25px',
-    textAlign: 'center',
-    padding: '50px 0 50px 0',
-  },
-  subTitle: {
-    color: '#ffffb3',
-    fontSize: '25px',
-    textAlign: 'center',
-    padding: '10px 0 50px 0',
-  },
-  githubLinks: {
-    marginTop: '100px',
-    color: '#ffffb3',
-  },
-  buttonControl: {
-    marginTop: '50px',
-    textAlign: 'center',
-    color: 'white',
-    marginBottom: '100px',
-  },
-}));
+const Paper = styled(PaperImp)`
+  height: 140;
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Control = styled.div`
+  padding: 20px;
+`;
+
+const Title = styled.div`
+  color: #ffffb3;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px 0 20px 0;
+`;
+
+const ButtonControl = styled.div`
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  margin-bottom: 100px;
+`;
 
 export default function SpacingGrid() {
   const [spacing, setSpacing] = React.useState(2);
-  const classes = useStyles();
   const router = useRouter();
 
   const handleOnClick = () => {
@@ -57,26 +44,26 @@ export default function SpacingGrid() {
 
   return (
     <>
-      <div className={classes.title}>
+      <Title>
         Share this site to your family 👨‍👩‍👧‍👧 and friends to keep updated <br />{' '}
         with lastest statistics of covid-19 🦠 virus report
-      </div>
-      <div className={classes.subTitle}>
+      </Title>
+      <Title>
         Wash 🧼 hands 👐 often with soap and running water, for at least 20{' '}
         <br />
         seconds. Try not to touch your eyes, nose or mouth. We wish you and your{' '}
         <br />
         family always healthy! 🤗
-      </div>
-      <div className={classes.subTitle}>
+      </Title>
+      <Title>
         If you 💖 this project you can buy us a coffee ☕ to surport our work
-      </div>
-      <div className={classes.subTitle}>😊 Thank you!</div>
-      <Grid container className={classes.root} spacing={10}>
+      </Title>
+      <Title>😊 Thank you!</Title>
+      <Grid container spacing={10}>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={spacing}>
             <Grid item>
-              <Paper className={classes.paper}>
+              <Paper>
                 <img
                   src="/paypalIcon.png"
                   alt="paypal"
@@ -87,7 +74,7 @@ export default function SpacingGrid() {
               </Paper>
             </Grid>
             <Grid item>
-              <Paper className={classes.paper}>
+              <Paper>
                 <img
                   src="/paypalQR.png"
                   alt="paypal"
@@ -101,7 +88,7 @@ export default function SpacingGrid() {
         <Grid item xs={12}>
           <Grid container justify="center" spacing={spacing}>
             <Grid item>
-              <Paper className={classes.paper}>
+              <Paper>
                 <img
                   src="/beemitlogo.png"
                   alt="beemit"
@@ -112,7 +99,7 @@ export default function SpacingGrid() {
               </Paper>
             </Grid>
             <Grid item>
-              <Paper className={classes.paper}>
+              <Paper>
                 <img
                   src="/beemitQR.jpeg"
                   alt="beemit"
@@ -126,7 +113,7 @@ export default function SpacingGrid() {
         <Grid item xs={12}>
           <Grid container justify="center" spacing={spacing}>
             <Grid item>
-              <Paper className={classes.paper}>
+              <Paper>
                 <img
                   src="/wechat.png"
                   alt="wechat"
@@ -137,7 +124,7 @@ export default function SpacingGrid() {
               </Paper>
             </Grid>
             <Grid item>
-              <Paper className={classes.paper}>
+              <Paper>
                 <img
                   src="/wechatQR.png"
                   alt="wechat"
@@ -151,7 +138,7 @@ export default function SpacingGrid() {
       </Grid>
 
       <Grid container justify="center" spacing={spacing}>
-        <div className={classes.githubLinks}>
+        <Title>
           If you want to contribute to the source code, please go to our Github
           page: {'  '}
           <a
@@ -159,23 +146,14 @@ export default function SpacingGrid() {
             href="https://www.github.com/cthroo/covid-19-australia">
             Github Repo
           </a>
-        </div>
+        </Title>
       </Grid>
 
-      <div className={classes.buttonControl}>
+      <ButtonControl>
         <Button variant="contained" color="primary" onClick={handleOnClick}>
           Back to Dashboard
         </Button>
-      </div>
-
-      <style jsx>{`
-        :global(body) {
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-            Helvetica, sans-serif;
-          background: #222222;
-        }
-      `}</style>
+      </ButtonControl>
     </>
   );
 }
