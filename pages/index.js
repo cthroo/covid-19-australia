@@ -87,6 +87,7 @@ export default function Index() {
           color: #067df7;
           text-decoration: none;
           font-size: 13px;
+          mouse: pointer;
         }
       `}</style>
     </div>

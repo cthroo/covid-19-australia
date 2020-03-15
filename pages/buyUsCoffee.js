@@ -6,6 +6,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import {useRouter} from 'next/router';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,6 +46,11 @@ const useStyles = makeStyles(theme => ({
 export default function SpacingGrid() {
   const [spacing, setSpacing] = React.useState(2);
   const classes = useStyles();
+  const router = useRouter();
+
+  const handleOnClick = () => {
+    router.push('/');
+  };
 
   return (
     <>
@@ -140,7 +146,7 @@ export default function SpacingGrid() {
       </Grid>
 
       <div className={classes.buttonControl}>
-        <Button variant="contained" color="primary" href="/">
+        <Button variant="contained" color="primary" onClick={handleOnClick}>
           Back to Dashboard
         </Button>
       </div>
