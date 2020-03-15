@@ -6,6 +6,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Australia from '../components/australia';
 import InfoBoard from '../components/infoBoard';
 import Grid from '@material-ui/core/Grid';
+import {useRouter} from 'next/router';
 import 'whatwg-fetch';
 
 const useStyles = makeStyles(theme => ({
@@ -27,10 +28,15 @@ const useStyles = makeStyles(theme => ({
 
 export default function Index() {
   const classes = useStyles();
+  const router = useRouter();
   const [location, setLocation] = useState(['AUSTRALIA']);
 
   const onLocationClick = stateName => {
     setLocation(stateName);
+  };
+  const handleClick = e => {
+    e.preventDefault();
+    router.push('/buyUsCoffee');
   };
 
   return (
@@ -53,7 +59,7 @@ export default function Index() {
         </a>
         <br />
         If you ❤️ this project 👉
-        <a href="/buyUsCoffee"> maybe you can buy us a coffee ☕ 😊</a>
+        <a onClick={handleClick}> maybe you can buy us a coffee ☕ 😊</a>
       </div>
 
       <style jsx>{`
