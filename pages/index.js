@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Australia from '../components/australia';
 import InfoBoard from '../components/infoBoard';
-import {LOCATIONS} from '../const/index';
 import 'whatwg-fetch';
 
 const useStyles = makeStyles(theme => ({
