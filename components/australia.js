@@ -235,8 +235,8 @@ export default function Australia({onLocationClick}) {
     setDelay(Number(e.target.value));
   }
 
-  function handleIsRunningChange(e) {
-    setIsRunning(e.target.checked);
+  function handleIsRunningChange() {
+    setIsRunning(!isRunning);
   }
 
   useInterval(
