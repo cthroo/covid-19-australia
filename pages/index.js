@@ -24,12 +24,16 @@ const useStyles = makeStyles(theme => ({
 
 export default function Index() {
   const classes = useStyles();
-  const [location, setLocation] = useState(LOCATIONS['AUSTRALIA']);
+  const [location, setLocation] = useState(['AUSTRALIA']);
+
+  const onLocationClick = stateName => {
+    setLocation(stateName);
+  };
 
   return (
     <div className={classes.container}>
       <div className={classes.mainContent}>
-        <Australia />
+        <Australia onLocationClick={onLocationClick} />
         <InfoBoard location={location} />
       </div>
       <div className={classes.footer}>

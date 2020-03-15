@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Australia() {
+export default function Australia({onLocationClick}) {
   const classes = useStyles();
   const visEl = useRef(null);
   const [autoPlay, setAutoPlay] = useState(true);
@@ -130,6 +130,8 @@ export default function Australia() {
       function drawstate(d) {
         if (active.node() === this) return reset();
         active = d3.select(this).classed('active', true);
+
+        onLocationClick(d.properties.STATE_NAME);
 
         const bounds = path.bounds(d),
           dx = bounds[1][0] - bounds[0][0],
