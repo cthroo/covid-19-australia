@@ -28,8 +28,8 @@ export default function Index() {
         <InfoBoard />
       </div>
       <div className={classes.footer}>
-        Made by <a href="https://www.cthroo.com">Cthroo</a> | Data source:
-        health.nsw.gov.au
+        Made and maintained by <a href="https://www.cthroo.com">Cthroo</a> |
+        Data source: health.nsw.gov.au
         <br />
         If you want to support this project,{' '}
         <a href="https://www.cthroo.com">buy me a coffee ☕</a>
