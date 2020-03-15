@@ -1,7 +1,8 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import useInterval from '../hooks/useInterval.js';
 
 const useStyles = makeStyles(() => ({
   mapSection: {},
@@ -20,9 +21,10 @@ const useStyles = makeStyles(() => ({
 export default function Australia() {
   const classes = useStyles();
   const visEl = useRef(null);
+  const [autoPlay, setAutoPlay] = useState(false);
+
   useEffect(() => {
     const svg = d3.select(visEl.current);
-
     const w = 750;
     const h = 600;
 
@@ -202,8 +204,15 @@ export default function Australia() {
           .duration(1000)
           .attr('opacity', 0.1);
       }
+      useInterval(() => {
+        console.log('click a state');
+      }, 5000);
     });
-  }, []);
+  }, [autoPlay]);
+
+  const handleAutoPlayClick = () => {
+    setAutoPlay(!autoPlay);
+  };
 
   return (
     <div className={classes.mapSection}>
@@ -216,7 +225,10 @@ export default function Australia() {
         </svg>
       </div>
       <div className={classes.buttonControl}>
-        <Button variant="outlined" color="primary">
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={handleAutoPlayClick}>
           Auto Display
         </Button>
       </div>
