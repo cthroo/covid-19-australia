@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import * as d3 from 'd3';
 import {makeStyles} from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(() => ({
   mapSection: {},
@@ -212,6 +213,9 @@ export default function Australia() {
         <svg height={600} width={750}>
           <g ref={visEl} />
         </svg>
+      </div>
+      <div className={classes.buttonControl}>
+        <Button variant="contained">Auto Display</Button>
       </div>
     </div>
   );
