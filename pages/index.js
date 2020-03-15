@@ -28,9 +28,11 @@ export default function Index() {
         <InfoBoard />
       </div>
       <div className={classes.footer}>
-        Made by <a href="https://www.cthroo.com">Cthroo</a>
+        Made by <a href="https://www.cthroo.com">Cthroo</a> | Data source:
+        health.nsw.gov.au
         <br />
-        buy me a coffee<a href="https://www.cthroo.com">☕</a>
+        If you want to support this project,{' '}
+        <a href="https://www.cthroo.com">buy me a coffee ☕</a>
       </div>
 
       <style jsx>{`
