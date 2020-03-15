@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: '50px',
     textAlign: 'center',
     color: 'white',
+    marginBottom: '100px',
   },
 }));
 
@@ -125,7 +126,8 @@ export default function SpacingGrid() {
 
       <Grid container justify="center" spacing={spacing}>
         <div className={classes.githubLinks}>
-          If you want to contribute to the sourcecode, please go to: {'  '}
+          If you want to contribute to the sourcecode, please go to our Github
+          page: {'  '}
           <a
             target="_black"
             href="https://www.github.com/cthroo/covid-19-australia">
