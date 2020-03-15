@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 export default function Index() {
   const classes = useStyles();
   const router = useRouter();
-  const [location, setLocation] = useState(['AUSTRALIA']);
+  const [location, setLocation] = useState('AUSTRALIA');
 
   const onLocationClick = stateName => {
     setLocation(stateName);
@@ -64,7 +64,7 @@ export default function Index() {
           </a>
           <br />
           If you ❤️ this project 👉
-          <a onClick={handleClick}> maybe you can buy us a coffee ☕ 😊</a>
+          <a onClick={handleClick}> please consider buying us a coffee ☕ 😊</a>
         </div>
       </Grid>
     </Grid>
