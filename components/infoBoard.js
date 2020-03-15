@@ -49,6 +49,7 @@ const Label = styled.div`
 
 const Location = styled.div`
   font-size: 60px;
+  font-weight: 800;
 `;
 
 const StaState = styled.div`
@@ -57,10 +58,6 @@ const StaState = styled.div`
 
 const StaActive = styled.div`
   color: #df0e1f;
-`;
-
-const StaAritic = styled.div`
-  color: #720405;
 `;
 
 const StaDeceased = styled.div`
@@ -77,10 +74,6 @@ const StaConfirmed = styled.div`
 
 const StaRecovered = styled.div`
   color: #259c1e;
-`;
-
-const TextItem = styled.div`
-  text-align: center;
 `;
 
 const getData = location => {
