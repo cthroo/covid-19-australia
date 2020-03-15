@@ -96,8 +96,8 @@ const getData = location => {
       }
     case "New South Wales":
       return {
-        confirmedValue: data.NSW.todaySummarys.todayNewNumber,
-        activeValue: data.NSW.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.NSW.todaySummarys.totalConfirmedNumber,
+        activeValue: data.NSW.todaySummarys.todayNewNumber,
         // deathsDiff: data.NSW.todaySummarys.totalDeathNumber,
         deathsValue: data.NSW.todaySummarys.totalDeathNumber,
         activeDiff: data.NSW.todaySummarys.totalRemianNumber,
@@ -105,8 +105,8 @@ const getData = location => {
       };
     case 'Victoria':
       return {
-        confirmedValue: data.VIC.todaySummarys.todayNewNumber,
-        activeValue: data.VIC.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.VIC.todaySummarys.totalConfirmedNumber,
+        activeValue: data.VIC.todaySummarys.todayNewNumber,
         // deathsDiff: data.VIC.todaySummarys.totalDeathNumber,
         deathsValue: data.VIC.todaySummarys.totalDeathNumber,
         activeDiff: data.VIC.todaySummarys.totalRemianNumber,
@@ -114,8 +114,8 @@ const getData = location => {
       };
     case 'Tasmania':
       return {
-        confirmedValue: data.TAS.todaySummarys.todayNewNumber,
-        activeValue: data.TAS.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.TAS.todaySummarys.totalConfirmedNumber,
+        activeValue: data.TAS.todaySummarys.todayNewNumber,
         // deathsDiff: data.TAS.todaySummarys.totalDeathNumber,
         deathsValue: data.TAS.todaySummarys.totalDeathNumber,
         activeDiff: data.TAS.todaySummarys.totalRemianNumber,
@@ -123,8 +123,8 @@ const getData = location => {
       };
     case 'South Australia':
       return {
-        confirmedValue: data.SA.todaySummarys.todayNewNumber,
-        activeValue: data.SA.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.SA.todaySummarys.totalConfirmedNumber,
+        activeValue: data.SA.todaySummarys.todayNewNumber,
         // deathsDiff: data.SA.todaySummarys.totalDeathNumber,
         deathsValue: data.SA.todaySummarys.totalDeathNumber,
         activeDiff: data.SA.todaySummarys.totalRemianNumber,
@@ -132,8 +132,8 @@ const getData = location => {
       };
     case 'Northern Territory':
       return {
-        confirmedValue: data.NT.todaySummarys.todayNewNumber,
-        activeValue: data.NT.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.NT.todaySummarys.totalConfirmedNumber,
+        activeValue: data.NT.todaySummarys.todayNewNumber,
         // deathsDiff: data.NT.todaySummarys.totalDeathNumber,
         deathsValue: data.NT.todaySummarys.totalDeathNumber,
         activeDiff: data.NT.todaySummarys.totalRemianNumber,
@@ -141,8 +141,8 @@ const getData = location => {
       };
     case 'Western Australia':
       return {
-        confirmedValue: data.WA.todaySummarys.todayNewNumber,
-        activeValue: data.WA.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.WA.todaySummarys.totalConfirmedNumber,
+        activeValue: data.WA.todaySummarys.todayNewNumber,
         // deathsDiff: data.WA.todaySummarys.totalDeathNumber,
         deathsValue: data.WA.todaySummarys.totalDeathNumber,
         activeDiff: data.WA.todaySummarys.totalRemianNumber,
@@ -150,8 +150,8 @@ const getData = location => {
       };
     case 'Queensland':
       return {
-        confirmedValue: data.QLD.todaySummarys.todayNewNumber,
-        activeValue: data.QLD.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.QLD.todaySummarys.totalConfirmedNumber,
+        activeValue: data.QLD.todaySummarys.todayNewNumber,
         // deathsDiff: data.QLD.todaySummarys.totalDeathNumber,
         deathsValue: data.QLD.todaySummarys.totalDeathNumber,
         activeDiff: data.QLD.todaySummarys.totalRemianNumber,
@@ -159,8 +159,8 @@ const getData = location => {
       };
     case 'ACT':
       return {
-        confirmedValue: data.ACT.todaySummarys.todayNewNumber,
-        activeValue: data.ACT.todaySummarys.totalConfirmedNumber,
+        confirmedValue: data.ACT.todaySummarys.totalConfirmedNumber,
+        activeValue: data.ACT.todaySummarys.todayNewNumber,
         // deathsDiff: data.ACT.todaySummarys.totalDeathNumber,
         deathsValue: data.ACT.todaySummarys.totalDeathNumber,
         activeDiff: data.ACT.todaySummarys.totalRemianNumber,
