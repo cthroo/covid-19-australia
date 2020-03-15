@@ -37,7 +37,7 @@ export default function Index() {
           health.nsw.gov.au
         </a>
         <br />
-        If you want to support this project 👉
+        If you ❤️ this project 👉
         <a href="/buyUsCoffee">buy us a coffee ☕</a>
       </div>
 
