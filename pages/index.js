@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Australia from '../components/australia';
 import InfoBoard from '../components/infoBoard';
+import {LOCATIONS} from '../const/index';
 import 'whatwg-fetch';
 
 const useStyles = makeStyles(theme => ({
@@ -23,12 +24,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function Index() {
   const classes = useStyles();
+  const [location, setLocation] = useState(LOCATIONS['AUSTRALIA']);
 
   return (
     <div className={classes.container}>
       <div className={classes.mainContent}>
         <Australia />
-        <InfoBoard />
+        <InfoBoard location={location} />
       </div>
       <div className={classes.footer}>
         Made and maintained by{' '}

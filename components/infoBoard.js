@@ -68,16 +68,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function InfoBoard() {
+export default function InfoBoard({location}) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Container className={classes.container} maxWidth="lg">
         <Grid container item xs={12} className={classes.subContainer}>
-          <Grid item xs={4}>
+          <Grid item xs={12}>
             <div className={classes.staState}>
-              <div className={classes.location}>Nation Wide</div>
+              <div className={classes.location}>{location}</div>
             </div>
           </Grid>
         </Grid>
