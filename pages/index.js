@@ -11,9 +11,10 @@ import 'whatwg-fetch';
 
 const useStyles = makeStyles(theme => ({
   container: {
+    display: 'flex',
+    flexWrap: 'wrap',
     flexGrow: 1,
   },
-
   mainContent: {
     display: 'flex',
   },
@@ -45,8 +46,8 @@ export default function Index() {
   };
 
   return (
-    <Grid container xs={12} className={classes.container}>
-      <Grid container xs={12}>
+    <div className={classes.container}>
+      <Grid>
         <Grid item xs={12} lg={6}>
           <Australia onLocationClick={onLocationClick} />
         </Grid>
@@ -94,6 +95,6 @@ export default function Index() {
           font-size: 13px;
         }
       `}</style>
-    </Grid>
+    </div>
   );
 }
