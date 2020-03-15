@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     color: '#720405',
   },
   staDeceased: {
-    color: '#000000',
+    color: '#ffffb3',
   },
   staTested: {
     color: '#1da1f2',

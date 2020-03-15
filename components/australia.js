@@ -8,6 +8,7 @@ const useStyles = makeStyles(() => ({
     fontSize: '20px',
     textAlign: 'center',
     marginTop: '20px',
+    color: 'white',
   },
   container: {
     height: '90vh',
@@ -110,7 +111,7 @@ export default function Australia() {
         .attr('font-family', 'Roboto')
         .attr('text-anchor', 'middle')
         .attr('opacity', 0.1)
-        .text('AUSTRALIA');
+        .text('COVID-19');
 
       function drawstate(d) {
         if (active.node() === this) return reset();
