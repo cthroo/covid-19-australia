@@ -128,7 +128,10 @@ export default function Australia({onLocationClick}) {
         .text('COVID-19');
 
       function drawstate(d) {
-        if (active.node() === this) return reset();
+        if (active.node() === this) {
+          onLocationClick('AUSTRALIA');
+          return reset();
+        }
         active = d3.select(this).classed('active', true);
 
         onLocationClick(d.properties.STATE_NAME);
@@ -226,7 +229,7 @@ export default function Australia({onLocationClick}) {
   return (
     <div className={classes.mapSection}>
       <div className={classes.title}>
-        Australia COVID-19 Coronavirus Tracker (updated 13.03.2020)
+        Australia COVID-19 Coronavirus Tracker <br /> (updated 15.03.2020 17:00)
       </div>
       <div className={classes.container}>
         <svg height={600} width={750}>
