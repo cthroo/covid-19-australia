@@ -3,30 +3,26 @@
  */
 import React, {useEffect, useState, useRef} from 'react';
 import * as d3 from 'd3';
-import {makeStyles} from '@material-ui/core/styles';
+import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import useInterval from '../hooks/useInterval';
 import responsivefy from '../lib/responsivefy';
 import {locationD3Ids} from '../const/locationsD3Id';
 
-const useStyles = makeStyles(() => ({
-  mapSection: {},
-  title: {
-    fontSize: '28px',
-    textAlign: 'center',
-    marginTop: '20px',
-    color: 'white',
-  },
-  container: {},
-  buttonControl: {
-    textAlign: 'center',
-    color: 'white',
-  },
-}));
+const Title = styled.div`
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+`;
+
+const ButtonControl = styled.div`
+  text-align: center;
+  color: white;
+`;
 
 export default function Australia({onLocationClick}) {
-  const classes = useStyles();
   const visEl = useRef(null);
 
   const [count, setCount] = useState(0);
@@ -254,28 +250,28 @@ export default function Australia({onLocationClick}) {
   );
 
   return (
-    <div className={classes.mapSection}>
+    <div>
       <Grid container spacing={2} justify="center">
         <Grid item xs={12}>
-          <div className={classes.title}>
+          <Title>
             Australia COVID-19 Coronavirus Tracker <br /> (updated 15.03.2020
             17:00)
-          </div>
+          </Title>
         </Grid>
 
         <Grid item xs={12}>
-          <div ref={visEl} className={classes.container}></div>
+          <div ref={visEl}></div>
         </Grid>
 
         <Grid item xs={12}>
-          <div className={classes.buttonControl}>
+          <ButtonControl>
             <Button
               variant="outlined"
               color="primary"
               onClick={handleIsRunningChange}>
               {isRunning ? 'Stop Auto Display' : 'Auto Display'}
             </Button>
-          </div>
+          </ButtonControl>
         </Grid>
       </Grid>
     </div>
