@@ -22,10 +22,10 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     width: '100%',
     color: '#fffccc',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       bottom: 0,
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingBottom: '50px',
     },
   },
@@ -47,10 +47,10 @@ export default function Index() {
   return (
     <Grid container xs={12} className={classes.container}>
       <Grid container xs={12}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} lg={6}>
           <Australia onLocationClick={onLocationClick} />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} lg={6}>
           <InfoBoard location={location} />
         </Grid>
       </Grid>
