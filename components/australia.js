@@ -241,11 +241,7 @@ export default function Australia({onLocationClick}) {
 
   useInterval(
     () => {
-      if (count > 0) {
-        d3.select(`#${locationD3Ids[count]}`).dispatch('click');
-      }
       const nextClickState = locationD3Ids[count];
-      console.log(count);
       d3.select(`#${nextClickState}`).dispatch('click');
       setCount(count + 1 > locationD3Ids.length - 1 ? 0 : count + 1);
     },

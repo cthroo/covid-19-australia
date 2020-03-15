@@ -1,10 +1,18 @@
 export const locationD3Ids = [
   'location-NewSouthWales',
+  'location-NewSouthWales',
+  'location-Victoria',
   'location-Victoria',
   'location-Quesland',
+  'location-Quesland',
+  'location-SouthAustralia',
   'location-SouthAustralia',
   'location-WesternAustralia',
+  'location-WesternAustralia',
+  'location-Tasmania',
   'location-Tasmania',
   'location-NorthernTerritory',
+  'location-NorthernTerritory',
+  'location-ACT',
   'location-ACT',
 ];
