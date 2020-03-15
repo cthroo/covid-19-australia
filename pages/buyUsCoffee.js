@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
   paper: {
     height: 140,
     width: 100,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   control: {
     padding: theme.spacing(2),
@@ -77,6 +80,7 @@ export default function SpacingGrid() {
                   width="100px"
                   height="100px"
                 />
+                PayPal
               </Paper>
             </Grid>
             <Grid item>
@@ -101,6 +105,7 @@ export default function SpacingGrid() {
                   width="100px"
                   height="100px"
                 />
+                Beemit
               </Paper>
             </Grid>
             <Grid item>
@@ -125,6 +130,7 @@ export default function SpacingGrid() {
                   width="100px"
                   height="100px"
                 />
+                Wechat pay
               </Paper>
             </Grid>
             <Grid item>
