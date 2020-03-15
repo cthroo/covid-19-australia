@@ -39,18 +39,22 @@ export default function Australia() {
     //Define path generator
     const path = d3.geoPath().projection(projection);
 
+    /*
+     * 1. NSW
+     * 2. VIC
+     */
     const color = d3
       .scaleOrdinal()
       .range([
-        '#8dd3c7',
-        '#ffffb3',
-        '#bebada',
-        '#fb8072',
-        '#80b1d3',
-        '#fdb462',
-        '#b3de69',
-        '#fccde5',
-        '#d9d9d9',
+        '#e17a01',
+        '#efa22b',
+        '#efa22b',
+        '#f4d05a',
+        '#f4d05a',
+        '#ebe9aa',
+        '#ebe9aa',
+        '#ebe9aa',
+        '#000000',
       ]);
 
     //Load in GeoJSON data
