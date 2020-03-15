@@ -52,12 +52,12 @@ export default function Index() {
       </Grid>
       <Grid item xs={12}>
         <div className={classes.footer}>
-          Made and maintained by{' '}
-          <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source:{' '}
+          Visualisation Made and maintained by{' '}
+          <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source if
+          from:{' '}
           <a href="https://www.health.nsw.gov.au/" target="_black">
             health.nsw.gov.au
           </a>{' '}
-          (Please refer this site as official data origin)
           <br />
           If you ❤️ this project 👉
           <a onClick={handleClick}> please consider buying us a coffee ☕ 😊</a>
