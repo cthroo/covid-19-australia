@@ -7,6 +7,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import useInterval from '../hooks/useInterval';
+import responsivefy from '../lib/responsivefy';
 import {locationD3Ids} from '../const/locationsD3Id';
 
 const useStyles = makeStyles(() => ({
@@ -33,9 +34,14 @@ export default function Australia({onLocationClick}) {
   const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
-    const svg = d3.select(visEl.current);
     const w = 750;
     const h = 600;
+    const svg = d3
+      .select(visEl.current)
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h)
+      .call(responsivefy);
 
     //Define map projection
     const projection = d3
@@ -258,11 +264,7 @@ export default function Australia({onLocationClick}) {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={classes.container}>
-            <svg height={600} width={750}>
-              <g ref={visEl} />
-            </svg>
-          </div>
+          <div ref={visEl} className={classes.container}></div>
         </Grid>
 
         <Grid item xs={12}>
