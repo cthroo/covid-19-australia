@@ -56,7 +56,8 @@ export default function Index() {
           <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source:{' '}
           <a href="https://www.health.nsw.gov.au/" target="_black">
             health.nsw.gov.au
-          </a>
+          </a>{' '}
+          (Please refer this site as official data origin)
           <br />
           If you ❤️ this project 👉
           <a onClick={handleClick}> please consider buying us a coffee ☕ 😊</a>
