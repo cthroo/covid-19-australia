@@ -62,8 +62,11 @@ export default function SpacingGrid() {
         with lastest statistics of covid-19 🦠 virus report
       </div>
       <div className={classes.subTitle}>
-        Wash 🧼 hands 👐 frequently! keep hygiene! We wish you and your family
-        always healthy! 🤗
+        Wash 🧼 hands 👐 often with soap and running water, for at least 20{' '}
+        <br />
+        seconds. Try not to touch your eyes, nose or mouth. We wish you and your{' '}
+        <br />
+        family always healthy! 🤗
       </div>
       <div className={classes.subTitle}>
         If you 💖 this project you can buy us a coffee ☕ to surport our work
