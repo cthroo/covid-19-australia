@@ -29,7 +29,7 @@ export default function Australia({onLocationClick}) {
   const visEl = useRef(null);
 
   const [count, setCount] = useState(0);
-  const [delay, setDelay] = useState(2000);
+  const [delay, setDelay] = useState(5000);
   const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
