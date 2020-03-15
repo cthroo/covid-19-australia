@@ -12,6 +12,9 @@ const useStyles = makeStyles(() => ({
     color: 'white',
   },
   container: {},
+  buttonControl: {
+    textAlign: 'center',
+  },
 }));
 
 export default function Australia() {
@@ -213,7 +216,9 @@ export default function Australia() {
         </svg>
       </div>
       <div className={classes.buttonControl}>
-        <Button variant="contained">Auto Display</Button>
+        <Button variant="outlined" color="primary">
+          Auto Display
+        </Button>
       </div>
     </div>
   );
