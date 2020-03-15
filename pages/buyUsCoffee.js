@@ -59,7 +59,7 @@ export default function SpacingGrid() {
     <>
       <div className={classes.title}>
         Share this site to your family 👨‍👩‍👧‍👧 and friends to keep them updated with
-        covid-19 🦠 virus
+        lastest information of covid-19 🦠 virus from government website
       </div>
       <div className={classes.subTitle}>
         Wash 🧼 hands 👐 frequently! keep hygiene! Wish you and your family
