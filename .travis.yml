@@ -3,6 +3,11 @@ node_js:
 - '12'
 stages:
   - build
+cache:
+  directories:
+    - $HOME/.cache/yarn
+    - node_modules
+    - .next/cache
 jobs:
   include:
     - stage: build
@@ -13,7 +18,9 @@ deploy:
   secret_access_key:
     secure: eqRUUvKZ/oFhyca8/UdjQDfTOXTSObgChwZklv+aWGuY49nOFgrWs9Paoia3lmxb/tnuHGE1MhJJFYSl0wS3YvfMJ7gwtwXHdWRbCao16aqiO8YgAePreu7EldodzFqYFmz2LNyeEkoXo8pvqELMLFpy0586aNxqjNSjmfUtb5hD+teDg/1VUq3RKGkHJQjZkM26rBFCgN/2MBbZqYnsgnFDTHgej1iPHkWaqRRqq9hpe7/wFnT6CYhCc0l4nDslmBkqSuwJVyu5pMy/57cLd7/ZbaJ3N+yO4vuZB0yIqWpZ6V63i5nL0q7KnmCstBHPV4VrifE05OXTVhsyX8OIa9wHS1LvPCuSIVe9DvfPBjdZdzeiGQVdIwL6TYOJO2QGCjL2DaySADIJtR8XDOO1k/nGeXpDlDSTxZNim9jugdgniG7lEpU6Ig0SWAK98GpOy5N7GOozcquxa4o37BWyL1rkK1ZX3S6bzWiqCU2yvhIcjaUeojYjGpDlsOoWi21vBqDWcUlimmYMX952nUmsNf6wRnJ8WcHG1As4q663VltJNGtizGqWeKvBO0r5ROOMH6MMarq/gO9CD8/HUGRmsSOu8+DYR0miZ1PbIYXTodo3pmCMRv1Lc8Q4lRL6pR09IYxHygpry0TuKAQLkazWBll1/wC4MsH1vgBJOHJ7+Go=
   bucket: covid-19.cthroo.com
-  local_dir: out
+  local-dir: out
   acl: public_read
   on:
     repo: cthroo/covid-19-australia
+  skip_cleanup: true
+  region: ap-southeast-2
