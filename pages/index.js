@@ -43,18 +43,22 @@ export default function Index() {
       <Grid item xs={12}>
         <Footer>
           Visualisation Made and maintained by{' '}
-          <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source if
-          from:{' '}
+          <a href="https://www.cthroo.com">www.cthroo.com</a> | Data source
+          from: <br />
           <a href="https://www.health.nsw.gov.au/" target="_black">
             health.nsw.gov.au
           </a>{' '}
-          <br />
+          |{' '}
           <a href="https://www.health.qld.gov.au/" target="_black">
             health.qld.gov.au
           </a>{' '}
           |{' '}
           <a href="http://www.dhhs.vic.gov.au" target="_black">
             dhhs.vic.gov.au
+          </a>{' '}
+          |{' '}
+          <a href="http://covid-19.wileam.com/" target="_black">
+            covid-19.wileam.com
           </a>{' '}
           <br />
           If you ❤️ this project 👉
