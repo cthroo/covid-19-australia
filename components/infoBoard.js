@@ -17,7 +17,7 @@ const Container = styled(ContainerImp)`
 `;
 
 const SubContainer = styled(Grid)`
-  padding: 50px;
+  padding: 25px;
   text-align: center;
 `;
 
@@ -199,13 +199,6 @@ export default function InfoBoard({location}) {
           </Grid>
         </SubContainer>
         <SubContainer container item xs={12}>
-          <Grid item xs={6} md={4}>
-            {/* <StaTested>
-              <Diff>( +829 )</Diff>
-              <Value>22.5K</Value>
-              <Label>Tested</Label>
-            </StaTested> */}
-          </Grid>
           <Grid item xs={6} md={4}>
             <StaConfirmed>
               <Diff></Diff>
