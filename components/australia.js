@@ -254,8 +254,8 @@ export default function Australia({onLocationClick}) {
       <Grid container spacing={2} justify="center">
         <Grid item xs={12}>
           <Title>
-            Australia COVID-19 Coronavirus Tracker <br /> (updated 16.03.2020
-            17:00)
+            Australia COVID-19 Coronavirus Tracker <br /> (updated 17.03.2020
+            8:00)
           </Title>
         </Grid>
 
