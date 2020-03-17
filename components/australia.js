@@ -9,12 +9,16 @@ import Grid from '@material-ui/core/Grid';
 import useInterval from '../hooks/useInterval';
 import responsivefy from '../lib/responsivefy';
 import {locationD3Ids} from '../const/locationsD3Id';
+import {down} from 'styled-breakpoints';
 
 const Title = styled.div`
   font-size: 28px;
   text-align: center;
   margin-top: 20px;
   color: white;
+  ${down('tablet')} {
+    font-size: 16px;
+  }
 `;
 
 const ButtonControl = styled.div`

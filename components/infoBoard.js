@@ -5,6 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ContainerImp from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import {down} from 'styled-breakpoints';
 import {data} from '../const/data';
 
 const Container = styled(ContainerImp)`
@@ -19,6 +20,9 @@ const Container = styled(ContainerImp)`
 const SubContainer = styled(Grid)`
   padding: 25px;
   text-align: center;
+  ${down('tablet')} {
+    padding: 10px 10px;
+  }
 `;
 
 const Paper = styled.div`
@@ -35,22 +39,35 @@ const Diff = styled.div`
   font-size: 25px;
   margin-bottom: 8px;
   font-weight: 700;
+  ${down('tablet')} {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
 `;
 
 const Value = styled.div`
   font-size: 70px;
   margin-bottom: 14px;
   font-weight: 800;
+  ${down('tablet')} {
+    font-size: 16px;
+  }
 `;
 
 const Label = styled.div`
   font-size: 30px;
   font-weight: 700;
+  ${down('tablet')} {
+    font-size: 16px;
+  }
 `;
 
 const Location = styled.div`
   font-size: 60px;
   font-weight: 800;
+  ${down('tablet')} {
+    font-size: 20px;
+  }
 `;
 
 const StaState = styled.div`
@@ -83,18 +100,14 @@ const getData = location => {
     case 'AUSTRALIA':
       return {
         confirmedValue: data.AUS.todaySummarys.totalConfirmedNumber,
-        activeValue:
-          data.AUS.todaySummarys.totalRemianNumber,
+        activeValue: data.AUS.todaySummarys.totalRemianNumber,
         // deathsDiff:
         //   data.AUS.todaySummarys.totalDeathNumber,
-        deathsValue:
-          data.AUS.todaySummarys.totalDeathNumber,
-        activeDiff:
-          data.AUS.todaySummarys.todayNewNumber,
-        recoveredValue:
-          data.AUS.todaySummarys.totalRecoveredNumber,
-      }
-    case "New South Wales":
+        deathsValue: data.AUS.todaySummarys.totalDeathNumber,
+        activeDiff: data.AUS.todaySummarys.todayNewNumber,
+        recoveredValue: data.AUS.todaySummarys.totalRecoveredNumber,
+      };
+    case 'New South Wales':
       return {
         confirmedValue: data.NSW.todaySummarys.totalConfirmedNumber,
         activeValue: data.NSW.todaySummarys.totalRemianNumber,
