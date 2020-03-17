@@ -14,7 +14,9 @@ const Container = styled(ContainerImp)`
   display: flex;
   flex-wrap: wrap;
   padding: 30px 10px;
-  margin: 0px auto;
+  ${down('tablet')} {
+    padding: 0px 10px;
+  }
 `;
 
 const SubContainer = styled(Grid)`
@@ -51,6 +53,7 @@ const Value = styled.div`
   font-weight: 800;
   ${down('tablet')} {
     font-size: 16px;
+    margin-bottom: 0px;
   }
 `;
 

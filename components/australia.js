@@ -17,7 +17,8 @@ const Title = styled.div`
   margin-top: 20px;
   color: white;
   ${down('tablet')} {
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 10px;
   }
 `;
 
