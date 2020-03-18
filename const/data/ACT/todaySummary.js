@@ -1,8 +1,8 @@
 export const todaySummarys = {
-  totalConfirmedNumber: 2,
+  totalConfirmedNumber: 3,
   totalRecoveredNumber: 0,
   totalDeathNumber: 0,
-  totalRemianNumber: 2,
+  totalRemianNumber: 3,
   todayNewNumber: 0,
-  otherStateRecords: []
+  otherStateRecords: [],
 };
