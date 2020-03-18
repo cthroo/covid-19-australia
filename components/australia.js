@@ -260,7 +260,7 @@ export default function Australia({onLocationClick}) {
         <Grid item xs={12}>
           <Title>
             Australia COVID-19 Coronavirus Tracker <br /> (updated 18.03.2020
-            18:00)
+            23:32)
           </Title>
         </Grid>
 

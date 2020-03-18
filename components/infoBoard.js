@@ -85,8 +85,12 @@ const StaDeceased = styled.div`
   color: #ffffb3;
 `;
 
-const StaTested = styled.div`
+const StaUnderInvestigation = styled.div`
   color: #1da1f2;
+`;
+
+const StaExcluded = styled.div`
+  color: #80da83;
 `;
 
 const StaConfirmed = styled.div`
@@ -118,6 +122,8 @@ const getData = location => {
         deathsValue: data.NSW.todaySummarys.totalDeathNumber,
         activeDiff: data.NSW.todaySummarys.todayNewNumber,
         recoveredValue: data.NSW.todaySummarys.totalRecoveredNumber,
+        casesTestedAndExcluded: data.NSW.todaySummarys.casesTestedAndExcluded,
+        casesUnderInvestigation: data.NSW.todaySummarys.casesUnderInvestigation,
       };
     case 'Victoria':
       return {
@@ -228,6 +234,33 @@ export default function InfoBoard({location}) {
               <Value>{d.recoveredValue}</Value>
               <Label>Recovered</Label>
             </StaRecovered>
+          </Grid>
+        </SubContainer>
+
+        <SubContainer container item xs={12}>
+          <Grid item xs={6} md={4}>
+            {d.casesUnderInvestigation ? (
+              <StaUnderInvestigation>
+                <Diff></Diff>
+                <Value>{d.casesUnderInvestigation}</Value>
+                <Label>Under Investigation</Label>
+              </StaUnderInvestigation>
+            ) : (
+              ''
+            )}
+          </Grid>
+          <Grid item xs={6} md={4}>
+            {d.casesTestedAndExcluded ? (
+              <StaExcluded>
+                <Diff></Diff>
+                <Value>
+                  {d.casesTestedAndExcluded ? d.casesTestedAndExcluded : ''}
+                </Value>
+                <Label>Tested & Excluded</Label>
+              </StaExcluded>
+            ) : (
+              ''
+            )}
           </Grid>
         </SubContainer>
       </Container>
