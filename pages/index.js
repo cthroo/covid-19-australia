@@ -27,6 +27,17 @@ const Reference = styled.div`
   font-size: 12px;
 `;
 
+const Coffeebanner = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const CoffeeLogo = styled.img`
+  width: 127px;
+  height: 27px;
+  cursor: pointer;
+`;
+
 export default function Index() {
   const router = useRouter();
   const [location, setLocation] = useState('AUSTRALIA');
@@ -37,6 +48,10 @@ export default function Index() {
   const handleClick = e => {
     e.preventDefault();
     router.push('/buyUsCoffee');
+  };
+
+  const handleBuyCoffeeClick = () => {
+    window.open('https://ko-fi.com/F1F61IM4R', '_blank');
   };
 
   return (
@@ -51,6 +66,7 @@ export default function Index() {
       </Grid>
       <Grid item xs={12}>
         <Footer>
+          {' '}
           Join 💬 discussions about Australian companies 👉{' '}
           <a href="https://www.cthroo.com/discussions">Discussions</a> <br />
           <Reference>
@@ -72,8 +88,14 @@ export default function Index() {
             </a>{' '}
           </Reference>
           <br />
-          If you ❤️ this project 👉
-          <a onClick={handleClick}> please consider support our work 😊</a>
+          <Coffeebanner>
+            If you ❤️ this project 👉{' '}
+            <CoffeeLogo
+              src="/buyMeACoffee.png"
+              alt="buy me coffee"
+              onClick={handleBuyCoffeeClick}
+            />
+          </Coffeebanner>
         </Footer>
       </Grid>
     </>

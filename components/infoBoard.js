@@ -205,40 +205,21 @@ export default function InfoBoard({location}) {
           </Grid>
         </SubContainer>
         <SubContainer container item xs={12}>
-          <Grid item xs={6} md={4}>
+          <Grid item xs={4} md={4}>
             <StaActive>
               <Diff>{d.activeDiff ? `+${d.activeDiff}` : ''}</Diff>
               <Value>{d.activeValue}</Value>
               <Label>Active</Label>
             </StaActive>
           </Grid>
-          <Grid item xs={6} md={4}>
+          <Grid item xs={4} md={4}>
             <StaDeceased>
               <Diff></Diff>
               <Value>{d.deathsValue}</Value>
               <Label>Deaths</Label>
             </StaDeceased>
           </Grid>
-        </SubContainer>
-        <SubContainer container item xs={12}>
-          <Grid item xs={6} md={4}>
-            <StaConfirmed>
-              <Diff></Diff>
-              <Value>{d.confirmedValue}</Value>
-              <Label>Confirmed</Label>
-            </StaConfirmed>
-          </Grid>
-          <Grid item xs={6} md={4}>
-            <StaRecovered>
-              <Diff></Diff>
-              <Value>{d.recoveredValue}</Value>
-              <Label>Recovered</Label>
-            </StaRecovered>
-          </Grid>
-        </SubContainer>
-
-        <SubContainer container item xs={12}>
-          <Grid item xs={6} md={4}>
+          <Grid item xs={4} md={4}>
             {d.casesUnderInvestigation ? (
               <StaUnderInvestigation>
                 <Diff></Diff>
@@ -249,7 +230,23 @@ export default function InfoBoard({location}) {
               ''
             )}
           </Grid>
-          <Grid item xs={6} md={4}>
+        </SubContainer>
+        <SubContainer container item xs={12}>
+          <Grid item xs={4} md={4}>
+            <StaConfirmed>
+              <Diff></Diff>
+              <Value>{d.confirmedValue}</Value>
+              <Label>Confirmed</Label>
+            </StaConfirmed>
+          </Grid>
+          <Grid item xs={4} md={4}>
+            <StaRecovered>
+              <Diff></Diff>
+              <Value>{d.recoveredValue}</Value>
+              <Label>Recovered</Label>
+            </StaRecovered>
+          </Grid>
+          <Grid item xs={4} md={4}>
             {d.casesTestedAndExcluded ? (
               <StaExcluded>
                 <Diff></Diff>
