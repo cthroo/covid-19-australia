@@ -201,7 +201,7 @@ export default function InfoBoard({location}) {
         <SubContainer container item xs={12}>
           <Grid item xs={6} md={4}>
             <StaActive>
-              <Diff>( +{d.activeDiff} today )</Diff>
+              <Diff>{d.activeDiff ? `+${d.activeDiff}` : ''}</Diff>
               <Value>{d.activeValue}</Value>
               <Label>Active</Label>
             </StaActive>
