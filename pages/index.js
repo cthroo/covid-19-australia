@@ -51,8 +51,8 @@ export default function Index() {
       </Grid>
       <Grid item xs={12}>
         <Footer>
-          Visualisation Made and maintained by{' '}
-          <a href="https://www.cthroo.com">www.cthroo.com</a> <br />
+          Join 💬 discussions about Australian companies 👉{' '}
+          <a href="https://www.cthroo.com/discussions">Discussions</a> <br />
           <Reference>
             Data:{' '}
             <a href="https://www.health.nsw.gov.au/" target="_black">
@@ -73,7 +73,7 @@ export default function Index() {
           </Reference>
           <br />
           If you ❤️ this project 👉
-          <a onClick={handleClick}> please consider buying us a coffee ☕ 😊</a>
+          <a onClick={handleClick}> please consider support our work 😊</a>
         </Footer>
       </Grid>
     </>
