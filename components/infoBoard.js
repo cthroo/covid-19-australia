@@ -89,6 +89,10 @@ const StaUnderInvestigation = styled.div`
   color: #1da1f2;
 `;
 
+const StaTotalTested = styled.div`
+  color: #1da1f2;
+`;
+
 const StaExcluded = styled.div`
   color: #80da83;
 `;
@@ -122,11 +126,12 @@ const getData = location => {
         deathsValue: data.NSW.todaySummarys.totalDeathNumber,
         activeDiff: data.NSW.todaySummarys.todayNewNumber,
         recoveredValue: data.NSW.todaySummarys.totalRecoveredNumber,
-        casesTestedAndExcluded: data.NSW.todaySummarys.casesTestedAndExcluded,
+        totalTestedAndExcluded: data.NSW.todaySummarys.totalTestedAndExcluded,
         casesUnderInvestigation: data.NSW.todaySummarys.casesUnderInvestigation,
       };
     case 'Victoria':
       return {
+        totalTested: data.VIC.todaySummarys.totalTested,
         confirmedValue: data.VIC.todaySummarys.totalConfirmedNumber,
         activeValue: data.VIC.todaySummarys.totalRemianNumber,
         // deathsDiff: data.VIC.todaySummarys.totalDeathNumber,
@@ -136,6 +141,8 @@ const getData = location => {
       };
     case 'Tasmania':
       return {
+        totalTested: data.TAS.todaySummarys.totalTested,
+        totalTestedAndExcluded: data.TAS.todaySummarys.totalTestedAndExcluded,
         confirmedValue: data.TAS.todaySummarys.totalConfirmedNumber,
         activeValue: data.TAS.todaySummarys.totalRemianNumber,
         // deathsDiff: data.TAS.todaySummarys.totalDeathNumber,
@@ -145,6 +152,7 @@ const getData = location => {
       };
     case 'South Australia':
       return {
+        totalTested: data.SA.todaySummarys.totalTested,
         confirmedValue: data.SA.todaySummarys.totalConfirmedNumber,
         activeValue: data.SA.todaySummarys.totalRemianNumber,
         // deathsDiff: data.SA.todaySummarys.totalDeathNumber,
@@ -163,6 +171,8 @@ const getData = location => {
       };
     case 'Western Australia':
       return {
+        totalTested: data.WA.todaySummarys.totalTested,
+        totalTestedAndExcluded: data.WA.todaySummarys.totalTestedAndExcluded,
         confirmedValue: data.WA.todaySummarys.totalConfirmedNumber,
         activeValue: data.WA.todaySummarys.totalRemianNumber,
         // deathsDiff: data.WA.todaySummarys.totalDeathNumber,
@@ -172,6 +182,7 @@ const getData = location => {
       };
     case 'Queensland':
       return {
+        totalTested: data.QLD.todaySummarys.totalTested,
         confirmedValue: data.QLD.todaySummarys.totalConfirmedNumber,
         activeValue: data.QLD.todaySummarys.totalRemianNumber,
         // deathsDiff: data.QLD.todaySummarys.totalDeathNumber,
@@ -181,6 +192,8 @@ const getData = location => {
       };
     case 'ACT':
       return {
+        totalTested: data.ACT.todaySummarys.totalTested,
+        totalTestedAndExcluded: data.ACT.todaySummarys.totalTestedAndExcluded,
         confirmedValue: data.ACT.todaySummarys.totalConfirmedNumber,
         activeValue: data.ACT.todaySummarys.totalRemianNumber,
         // deathsDiff: data.ACT.todaySummarys.totalDeathNumber,
@@ -229,6 +242,16 @@ export default function InfoBoard({location}) {
             ) : (
               ''
             )}
+
+            {d.totalTested ? (
+              <StaTotalTested>
+                <Diff></Diff>
+                <Value>{d.totalTested}</Value>
+                <Label>Total Tested</Label>
+              </StaTotalTested>
+            ) : (
+              ''
+            )}
           </Grid>
         </SubContainer>
         <SubContainer container item xs={12}>
@@ -247,11 +270,11 @@ export default function InfoBoard({location}) {
             </StaRecovered>
           </Grid>
           <Grid item xs={4} md={4}>
-            {d.casesTestedAndExcluded ? (
+            {d.totalTestedAndExcluded ? (
               <StaExcluded>
                 <Diff></Diff>
                 <Value>
-                  {d.casesTestedAndExcluded ? d.casesTestedAndExcluded : ''}
+                  {d.totalTestedAndExcluded ? d.totalTestedAndExcluded : ''}
                 </Value>
                 <Label>Tested & Excluded</Label>
               </StaExcluded>
