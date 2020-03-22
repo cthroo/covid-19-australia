@@ -1,5 +1,5 @@
 export const todaySummarys = {
-  totalTested: 0,
+  totalTested: 2414,
   totalTestedAndExcluded: 2395,
   totalConfirmedNumber: 19,
   totalRecoveredNumber: 1,
