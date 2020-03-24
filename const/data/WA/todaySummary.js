@@ -1,10 +1,10 @@
 export const todaySummarys = {
   totalTested: 0,
-  totalTestedAndExcluded: 9498,
-  totalConfirmedNumber: 140,
+  totalTestedAndExcluded: 9948,
+  totalConfirmedNumber: 175,
   totalRecoveredNumber: 1,
   totalDeathNumber: 1,
-  totalRemianNumber: 138,
+  totalRemianNumber: 173,
   todayNewNumber: 0,
   otherStateRecords: [],
 };
