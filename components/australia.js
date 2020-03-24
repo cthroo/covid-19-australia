@@ -32,7 +32,7 @@ export default function Australia({onLocationClick}) {
 
   const [count, setCount] = useState(0);
   const [delay, setDelay] = useState(5000);
-  const [isRunning, setIsRunning] = useState(true);
+  const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
     const w = 750;
