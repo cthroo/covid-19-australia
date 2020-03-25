@@ -5,6 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ContainerImp from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import {down} from 'styled-breakpoints';
 import {data} from '../const/data';
 
@@ -17,6 +18,11 @@ const Container = styled(ContainerImp)`
   ${down('tablet')} {
     padding: 0px 10px;
   }
+`;
+
+const ButtonControl = styled.div`
+  text-align: center;
+  color: white;
 `;
 
 const SubContainer = styled(Grid)`
@@ -185,12 +191,28 @@ const getData = location => {
   }
 };
 
+const Link = styled.a`
+  color: white;
+`;
+
 export default function InfoBoard({location}) {
   const d = getData(location);
 
   return (
     <div>
       <Container maxWidth="lg">
+        <Grid item xs={12}>
+          <ButtonControl>
+            <Button variant="contained" color="primary">
+              <Link
+                href="https://covid19boards.com"
+                target="_blank"
+                rel="noreferrer noopener">
+                World map is out, click to check
+              </Link>
+            </Button>
+          </ButtonControl>
+        </Grid>
         <SubContainer container item xs={12}>
           <Grid item xs={12}>
             <StaState>
