@@ -82,10 +82,6 @@ export default function Index() {
             <a href="http://www.dhhs.vic.gov.au" target="_black">
               dhhs.vic.gov.au
             </a>{' '}
-            |{' '}
-            <a href="http://covid-19.wileam.com/" target="_black">
-              covid-19.wileam.com
-            </a>{' '}
           </Reference>
           <br />
           <Coffeebanner>
